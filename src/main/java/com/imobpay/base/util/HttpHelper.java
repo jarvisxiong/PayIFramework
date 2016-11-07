@@ -25,9 +25,9 @@ import com.imobpay.base.log.LogPay;
 public class HttpHelper {
 
     /** 连接超时 */
-    public static int    connectTimeout = 5000;
+    public static int    connectTimeout = 10000;
     /** 读取超时 */
-    public static int    readTimeout    = 5000;
+    public static int    readTimeout    = 10000;
 
     /** 输入字符编码 */
     public static String inEncoding     = "UTF-8";

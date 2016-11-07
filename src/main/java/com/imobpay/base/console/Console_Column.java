@@ -49,8 +49,11 @@ public final class Console_Column {
     /** 返回描述 */
     public static final String  MESSAGE                = "message";
     /** 返回总字段描述 */
-    public static final String  TOTALRESULT            = "totalResult";
-
+    public static final String TOTALRESULT             = "totalResult";
+    /** 手机号格式校验正则*/
+    public static final String REGEX_MOBILE            = "^((13[0-9])|(15[^4,\\D])|(14[57])|(17[03678])|(18[0,0-9]))\\d{8}$";
+    /** 服务交易码 */
+    public static final String SMS_SERVERJYM           = "P_TRANCODE";
     /******************************** **** *******************************************/
 
     /******************************** 用户服务常量类 ***************************************/
@@ -154,36 +157,31 @@ public final class Console_Column {
     /** 备注 */
     public static final String  REMARK                 = "REMARK";
     /** 验证状态 */
-    public static final String  AUTHENFLAG             = "AUTHENFLAG";
+    public static final String AUTHENFLAG              = "AUTHENFLAG";
     /** 00用户信息查询*/
-    public static final String TRANSTYPE_00            = "00";
+    public static final String TRANSTYPE_00           = "00";
     /** 01个人付款查询 */
-    public static final String TRANSTYPE_01            = "01";
+    public static final String TRANSTYPE_01           = "01";
     /** 10查询个人收付款到卡 */
-    public static final String TRANSTYPE_10            = "10";
+    public static final String TRANSTYPE_10           = "10";
     /** 00查询个人收付款到账户 */
-    public static final String TRANSTYPEPAY_00         = "00";
+    public static final String TRANSTYPEPAY_00        = "00";
     /** 18查询个人收付款到卡(瑞钱包V5版) */
-    public static final String TRANSTYPE_19            = "19";
+    public static final String TRANSTYPE_19           = "19";
     /** 11查询个人收付款到账户(瑞钱包V5版) */
-    public static final String TRANSTYPEPAY_11         = "11";
+    public static final String TRANSTYPEPAY_11        = "11";
     /** 限额服务码 */
-    public static final String SERVCODE_100017         = "100017";
-    /** 原起商城服务码 */
-    public static final String SERVCODE_200054         = "200054";
-    /** 绿城财富服务码 */
-    public static final String SERVCODE_200053         = "200053";
+    public static final String SERVCODE_100017        = "100017";
     /** 产品编号 */
-    public static final String MERCHANTID_0002000058   = "0002000058";
+    public static final String MERCHANTID_0002000058  = "0002000058";
     /** 产品编号 */
-    public static final String PRODUCTID_0000000003    = "0000000003";
+    public static final String PRODUCTID_0000000003   = "0000000003";
     /** 产品编号 */
-    public static final String PRODUCTID_0000000002    = "0000000002";
+    public static final String PRODUCTID_0000000002   = "0000000002";
     /** 产品编号 */
-    public static final String PRODUCTID_0000000001    = "0000000001";
+    public static final String PRODUCTID_0000000001   = "0000000001";
     /** 产品编号 */
-    public static final String PRODUCTID_0000000000    = "0000000000";
-
+    public static final String PRODUCTID_0000000000   = "0000000000";
     /** 机构属性的自定义值 . */
     public static final String  BRANCHATTR_9           = "9";
     /** 用户类型的自定义值 . */
@@ -257,7 +255,7 @@ public final class Console_Column {
     public static final String  KEY_101                = "101";
 
     /** 手机号正则验证 */
-    public static final String  REGEX_MOBILE           = "1[0-9]{10}";
+    public static final String  REGEX_MOBILE1           = "1[0-9]{10}";
 
     /******************************** **** *******************************************/
 
@@ -501,7 +499,9 @@ public final class Console_Column {
     /** 手机号 */
     public static final String  HU_APPPHONE            = "appPhone";
     /** 返回数据格式 */
-    public static final String  DATE                   = "data";
+    public static final String DATE                    = "DATE";
+    /** 返回数据格式 */
+    public static final String  DATA                   = "data";
     /** 公告消息最大编号 */
     public static final String  NOTICECODE             = "NOTICECODE";
     /** 公告消息appuser */
@@ -1126,7 +1126,7 @@ public final class Console_Column {
     /** 是否检测信用卡张数 */
     public static final String  ISCHECKCARDNUM         = "ISCHECKCARDNUM";
     /** 是否检测T+0 */
-    public static final String  ISCHECKMONEY0          = "ISCHECKMONEY0";
+    public static final String ISCHECKMONEY0           = "ISCHECKMONEY0";
     /** 是否检测T+1 */
     public static final String  ISCHECKMONEY1          = "ISCHECKMONEY1";
 
@@ -1175,34 +1175,6 @@ public final class Console_Column {
     /** 瑞钱包活动返回字段:奖品名称 */
     public static final String  HD_MOBILENO            = "mobileNo";
     /**** 2016年10月26日11:42:41 由madman添加 *********/
-    /** 瑞粉吧 参数值 */
-    public static final String  PARAM_NAME             = "paramName";
-
-    /** 交易记录日期 */
-    public static final String  TRADERECORDDATE        = "TRADERECORDDATE";
-    /** 交易记录时间 */
-    public static final String  TRADERECORDTIME        = "TRADERECORDTIME";
-    /** 查询交易类型标识 */
-    public static final String  TYPE_FLAG              = "FLAG";
-    /** 查询交易类型标识:收款 */
-    public static final String  IN                     = "IN";
-    /** 查询交易类型标识:付款 */
-    public static final String  OUT                    = "OUT";
-    /** 查询交易类型标识:提现 */
-    public static final String  DEAW                   = "DEAW";
-    /** 查询交易类型标识:其它 */
-    public static final String  DETAIL                 = "DETAIL";
-    /** 总金额 */
-    public static final String  SUMAMOUNT              = "sumAmount";
-    /** 参数表配置业务中心系统key名称 */
-    public static final String  QTPAYNOTE              = "QTPAYNOTE";
-    /** 查询闪付交易流水去重复字段配置key */
-    public static final String SFREMOVEKEY             = "SFREMOVEKEY";
-    /** 交易名称 */
-    public static final String TRANSNAME               = "transName";
-    /** 充值账号 */
-    public static final String ACCOUNT2                = "account2";
-    
 
     /***************************************** Search服务常量字段结束 **********************/
 
@@ -1367,6 +1339,78 @@ public final class Console_Column {
     /** 可贷款状态 */
     public static final String  STATUS_LOAD            = "1";
     /***************************************** Note服务常量字段结束 **********************/
+
+    /***************************************** 短信服务常量字段开始 **********************/
+
+    /** 有效的短信类型 */
+    public static final String P_STATUS                = "1";
+    /** 时间 */
+    public static final String TIME                    = "TIME";
+    /** 短信总开关打开*/
+    public static final String TOTAL_SWITCH            = "TOTAL_SWITCH";
+    /** 默认通道*/
+    public static final String DEFAULT_CHANNLE         = "DEFAULT_CHANNLE";
+    /** 短信总开关打开*/
+    public static final String SMSSWITCH_1             = "1";
+    /** 短信合法验证*/
+    public static final String SMS_VERI_CONTENT        = "SMS_VERI_CONTENT";
+    /** 短信合法验证开关*/
+    public static final String SMS_VERI_CONTENT_SWITCH = "SMS_VERI_CONTENT_SWITCH";
+    /** 短信非法字符*/
+    public static final String SMS_VERI_ILLEGAL_CHAR   = "SMS_VERI_ILLEGAL_CHAR";
+    /** 默认机构*/
+    public static final String DEFAULT_BRANCHID        = "DEFAULT_BRANCHID";
+    /** 默认机构打开*/
+    public static final String DEFAULT_BRANCHID_SWITCH = "1";
+    /** 通道打开*/
+    public static final String SMS_CHANNEL_SWITCH_1    = "1";
+    /** SIGN*/
+    public static final String SMS_SIGN                = "SMSSIGN";
+    /** 短信签名状态打开*/
+    public static final String SMS_BRANCH_SWITCH_0     = "0";
+    /** 移通短信签名*/
+    public static final String ETSMS_SIGN              = "ETSMS_SIGN";
+    /** 建州短信签名*/
+    public static final String JZSMS_SIGN              = "JZSMS_SIGN";
+    /** 参数开关打开*/
+    public static final String GLBSYS_PARAM_SWITCH     = "1";
+    /** ETSM*/
+    public static final String ETSMS_CHARSET           = "ETSMS_CHARSET";
+    /** 建州实时短信编码格式*/
+    public static final String JZSMS_CHARSET           = "JZSMS_CHARSET";
+    /** ETSMS_SIGLE_MT*/
+    public static final String ETSMS_SIGLE_MT          = "ETSMS_SIGLE_MT";
+    /** ETSMS_SPSC*/
+    public static final String ETSMS_SPSC              = "ETSMS_SPSC";
+    /** ETSMS_SA*/
+    public static final String ETSMS_SA                = "ETSMS_SA";
+    /** MTERRCODE*/
+    public static final String MTERRCODE               = "mterrcode";
+    /** 短信发送失败状态*/
+    public static final String ETSMS_FAIL              = "1";
+    /** 短信发送成功状态*/
+    public static final String ETSMS_SUCCESS           = "0";
+    /** 状态*/
+    public static final String SENDSTATUS              = "SENDSTATUS";
+    /** 订单号*/
+    public static final String P_MSG_OUTORDER          = "P_MSG_OUTORDER";
+    /** 我们生成的订单号*/
+    public static final String P_MSG_ORDER             = "P_MSG_ORDER";
+    /** 下推状态*/
+    public static final String DP_STATUS               = "SendStatus";
+    /** 下推成功状态*/
+    public static final String DP_STATUS_1             = "1";
+    /** 下推失败状态*/
+    public static final String DP_STATUS_0             = "0";
+    /** 短信类型*/
+    public static final String SMS_YTURL               = "YTURL";
+    /** 短信类型*/
+    public static final String SMS_TYPE_PT             = "PT";
+    /** 短信类型*/
+    public static final String SMS_YTUSERNAME          = "YTUSERNAME";
+    /** 短信类型*/
+    public static final String SMS_YTPW                = "YTPW";
+    /***************************************** 短信服务常量字段结束 **********************/
 
     /***************************************** 卡服务服务常量字段开始 **********************/
     /** 客户类型 00表示个人01表示商户 */
