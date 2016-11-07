@@ -47,9 +47,10 @@ public class FreemarkerUtils {
      * @since JDK 1.6 PayIFramework 1.0 <br/>
      */
     public static void main(String[] args) throws Exception {
-        createFtl("TBV_CUSTOMER");
-//        createFtl("TB_CUST_ACTIVITY_RECORD");
+        createFtl("QTS_SYS_PARAM");
+        createFtl("TB_CUST_ACTIVITY_RECORD");
 //        createFtl("TB_ADDRESS", "TB_MOBILE_APP", "TB_MOBILE_INFO");
+
     }
 
     /**
@@ -60,8 +61,9 @@ public class FreemarkerUtils {
      * 创建日期：2016年7月5日.<br/>
      * 创建时间：下午3:33:02.<br/>
      * 参数者异常：@param str 参数者异常：@throws Exception .<br/>
-     * @exception Exception 系统异常
-     * 其它内容： JDK 1.6 PayIFramework 1.0.<br/>
+     * 
+     * @exception Exception
+     *                系统异常 其它内容： JDK 1.6 PayIFramework 1.0.<br/>
      */
     public static void createFtl(String... str) throws Exception {
         for (String string : str) {

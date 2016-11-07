@@ -31,7 +31,6 @@ public class FtpUtil {
      */
     private static Logger log = LoggerFactory.getLogger(FtpUtil.class);
 
-
     /**
      * 
      * 方法名： ftpPic.<br/>
@@ -40,20 +39,14 @@ public class FtpUtil {
      * 创建者：张朝辉.<br/>
      * 创建日期：2016年9月2日.<br/>
      * 创建时间：下午2:58:22.<br/>
-     * 参数或者异常：@param server IP地址
-     * 参数或者异常：@param port   端口
-     * 参数或者异常：@param user   用户名
-     * 参数或者异常：@param password 密码
-     * 参数或者异常：@param targetPath 目录
-     * 参数或者异常：@param sourcePath 文件内容
-     * 参数或者异常：@param fileName   文件名
-     * 参数或者异常：@param isFlag     是否调用FTP
-     * 参数或者异常：@param ftpConnTimes FTP连接时间
-     * 参数或者异常：@param ftpReadTimes FTP读取时间
+     * 参数或者异常：@param server IP地址 参数或者异常：@param port 端口 参数或者异常：@param user 用户名
+     * 参数或者异常：@param password 密码 参数或者异常：@param targetPath 目录 参数或者异常：@param
+     * sourcePath 文件内容 参数或者异常：@param fileName 文件名 参数或者异常：@param isFlag 是否调用FTP
+     * 参数或者异常：@param ftpConnTimes FTP连接时间 参数或者异常：@param ftpReadTimes FTP读取时间
      * 返回值： @return 返回结果：boolean.<br/>
      * 其它内容： JDK 1.6 PayIFramework 1.0.<br/>
      */
-    public static boolean ftpPic(String server, int port, String user, String password, String targetPath, String sourcePath, String fileName, String isFlag, String ftpConnTimes,String ftpReadTimes) {
+    public static boolean ftpPic(String server, int port, String user, String password, String targetPath, String sourcePath, String fileName, String isFlag, String ftpConnTimes, String ftpReadTimes) {
         long l = System.currentTimeMillis();
         // 是否开启FTP上传功能
         boolean bool = true;
@@ -149,6 +142,7 @@ public class FtpUtil {
         }
 
     }
+
     /**
      * 
      * 方法名： ftpFile.<br/>
@@ -157,20 +151,14 @@ public class FtpUtil {
      * 创建者：张朝辉.<br/>
      * 创建日期：2016年9月2日.<br/>
      * 创建时间：下午2:58:22.<br/>
-     * 参数或者异常：@param server IP地址
-     * 参数或者异常：@param port   端口
-     * 参数或者异常：@param user   用户名
-     * 参数或者异常：@param password 密码
-     * 参数或者异常：@param targetPath 目录
-     * 参数或者异常：@param sourcePath 文件内容
-     * 参数或者异常：@param fileName   文件名
-     * 参数或者异常：@param isFlag     是否调用FTP
-     * 参数或者异常：@param ftpConnTimes FTP连接时间
-     * 参数或者异常：@param ftpReadTimes FTP读取时间
+     * 参数或者异常：@param server IP地址 参数或者异常：@param port 端口 参数或者异常：@param user 用户名
+     * 参数或者异常：@param password 密码 参数或者异常：@param targetPath 目录 参数或者异常：@param
+     * sourcePath 文件内容 参数或者异常：@param fileName 文件名 参数或者异常：@param isFlag 是否调用FTP
+     * 参数或者异常：@param ftpConnTimes FTP连接时间 参数或者异常：@param ftpReadTimes FTP读取时间
      * 返回值： @return 返回结果：boolean.<br/>
      * 其它内容： JDK 1.6 PayIFramework 1.0.<br/>
      */
-    public static boolean ftpFile(String server, int port, String user, String password, String targetPath, String sourcePath, String fileName, String isFlag, String ftpConnTimes,String ftpReadTimes) {
+    public static boolean ftpFile(String server, int port, String user, String password, String targetPath, String sourcePath, String fileName, String isFlag, String ftpConnTimes, String ftpReadTimes) {
         long l = System.currentTimeMillis();
         // 是否开启FTP上传功能
         boolean bool = true;
@@ -188,7 +176,7 @@ public class FtpUtil {
                 if (targetPath.length() != 0) {
                     ftpClient.cd(targetPath);
                 }
-                
+
                 ftpClient.binary();
                 os = ftpClient.put(fileName);
                 byte[] b = Format.decryptBASE64(sourcePath);
@@ -261,10 +249,10 @@ public class FtpUtil {
                 }
                 log.info("FTP上传耗时:" + (System.currentTimeMillis() - l) + "FTP上传结果:" + bool);
             }
-            
+
             return true;
         }
-        
+
     }
 
     /**
@@ -337,7 +325,7 @@ public class FtpUtil {
      * @throws IOException
      * 
      */
-    public static String ftpGetPic(String server, int port, String user, String password, String path, String filename, String ftpConnTimes,String ftpReadTimes) {
+    public static String ftpGetPic(String server, int port, String user, String password, String path, String filename, String ftpConnTimes, String ftpReadTimes) {
         long l = System.currentTimeMillis();
         FtpClient ftpClient = new FtpClient();
         TelnetInputStream is = null;

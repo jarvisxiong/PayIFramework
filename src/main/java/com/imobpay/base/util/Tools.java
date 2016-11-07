@@ -98,30 +98,27 @@ public class Tools {
      * @param in
      *            in
      * @return String
-     */  
-    public static String leftFill(String src, int count, String in)
-    {
-        if(count > 0)
-        {
-            if(src.getBytes().length < count)
-            {
+     */
+    public static String leftFill(String src, int count, String in) {
+        if (count > 0) {
+            if (src.getBytes().length < count) {
                 String fills = "";
-                if(in == null || in.equals(""))
+                if (in == null || "".equals(in)) {
                     in = "0";
-                for(int i = 0; i < count; i++)
+                }
+                for (int i = 0; i < count; i++) {
                     fills = (new StringBuilder(String.valueOf(fills))).append(in).toString();
+                }
 
                 return (new StringBuilder(String.valueOf(fills.substring(0, fills.getBytes().length - src.getBytes().length)))).append(src).toString();
-            } else
-            {
+            } else {
                 return src;
             }
-        } else
-        {
+        } else {
             return src;
         }
     }
-    
+
     /**
      * 序列
      */
@@ -176,9 +173,10 @@ public class Tools {
     }
 
     /**
-     * 对用户姓名进行格式化处理
-     * 张**
-     * @param originalName 将要格式化的名字
+     * 对用户姓名进行格式化处理 张**
+     * 
+     * @param originalName
+     *            将要格式化的名字
      * @return String
      */
     public static String handleCustomerName(String originalName) {
@@ -191,10 +189,12 @@ public class Tools {
         }
         return newName;
     }
+
     /**
-     * 对用户姓名进行格式化处理
-     * 结果：*朝辉
-     * @param originalName 将要格式化的名字
+     * 对用户姓名进行格式化处理 结果：*朝辉
+     * 
+     * @param originalName
+     *            将要格式化的名字
      * @return String
      */
     public static String handlCustomerName(String originalName) {
@@ -207,6 +207,7 @@ public class Tools {
         }
         return newName;
     }
+
     /**
      * 
      * 星号添加
@@ -223,7 +224,7 @@ public class Tools {
         }
         return sb.toString();
     }
- 
+
     /**
      * 
      * 方法名： getnullString.<br/>
@@ -232,20 +233,21 @@ public class Tools {
      * 创建者：张朝辉.<br/>
      * 创建日期：2016年8月4日.<br/>
      * 创建时间：下午7:17:50.<br/>
-     * 参数或者异常：@param string
-     * 返回值： @return 返回结果：String.<br/>
+     * 参数或者异常：@param string 返回值： @return 返回结果：String.<br/>
      * 其它内容： JDK 1.6 PaySearchServer 1.0.<br/>
      */
-    public static String  getnullString(String string){
-        //如果传入字符串不为空直接返回，如果为空，则返回空字符。
-        return EmptyChecker.isNotEmpty(string)? string : "";
+    public static String getnullString(String string) {
+        // 如果传入字符串不为空直接返回，如果为空，则返回空字符。
+        return EmptyChecker.isNotEmpty(string) ? string : "";
     }
+
     /**
      * 
-     * isBlank:. <br/> 
-     * @author CAOWENJUN 
+     * isBlank:. <br/>
+     * 
+     * @author CAOWENJUN
      * @param str
-     * @return 
+     * @return
      * @since JDK 1.6
      */
     public static boolean isBlank(String str) {
@@ -254,5 +256,5 @@ public class Tools {
         }
         return false;
     }
-    
+
 }

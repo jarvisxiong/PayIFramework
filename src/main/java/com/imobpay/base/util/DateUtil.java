@@ -17,10 +17,10 @@ import com.imobpay.base.log.LogPay;
  */
 public final class DateUtil {
 
-    /** 日期时间格式  */
+    /** 日期时间格式 */
     public static final String YYYYMMDDHHMMSS = "yyyyMMddHHmmss";
 
-    /** 日期 格式*/
+    /** 日期 格式 */
     public static final String YYYYMMDD       = "yyyyMMdd";
 
     /** 时间格式 */
@@ -222,24 +222,27 @@ public final class DateUtil {
     }
 
     /**
-     * 将原格式 的日期字符串，转换成新的格式 
+     * 将原格式 的日期字符串，转换成新的格式
      * 
      * @Title: formatDateByFormat
      * @Description: 将原格式 的日期字符串，转换成新的格式
      * @Date May 3, 2014 21:23:41 PM
      * @modifyDate May 3, 2014 21:23:41 PM
-     * @param date 日期对象 java.util.Date
-     * @param srcFormat 原格式 java.lang.String
-     * @param disFormat 目标格式 java.lang.String
+     * @param date
+     *            日期对象 java.util.Date
+     * @param srcFormat
+     *            原格式 java.lang.String
+     * @param disFormat
+     *            目标格式 java.lang.String
      * @return String 转换后的String日期
      * 
-     * <pre>
+     *         <pre>
      * 案例：
      *    String result = formatDate("20150404",  "yyyyMMdd", "yyyy-MM-dd");
-     * 结果：result =  2015-04-04 
+     * 结果：result =  2015-04-04
      * </pre>
      * @since PlatForm 1.0
-    */
+     */
     public static String formatDate(String date, String srcFormat, String disFormat) {
         SimpleDateFormat srcSdf = null;
         try {
@@ -257,4 +260,5 @@ public final class DateUtil {
             srcSdf = null;
         }
     }
+
 }

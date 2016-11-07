@@ -287,15 +287,15 @@ public class Des3Util {
     }
 
     /** 参数 */
-    private static String codingType = "UTF-8";
+    private static String codingType      = "UTF-8";
     /** 参数 */
     private static String digestAlgorithm = "SHA1";
     /** 参数 */
-    private static String cryptAlgorithm = "DESede/CBC/PKCS5Padding";
+    private static String cryptAlgorithm  = "DESede/CBC/PKCS5Padding";
     /** 参数 */
-    private static String keyAlgorithm = "DESede";
+    private static String keyAlgorithm    = "DESede";
     /** 参数 */
-    private static byte[] defaultIV = "12345678".getBytes();
+    private static byte[] defaultIV       = "12345678".getBytes();
 
     /**
      * 

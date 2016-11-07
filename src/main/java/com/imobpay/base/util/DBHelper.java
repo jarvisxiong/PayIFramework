@@ -36,13 +36,15 @@ import org.apache.ibatis.type.JdbcType;
 public class DBHelper {
 
     /** 参数 */
-    private static final String URL       = "jdbc:oracle:thin:@192.168.1.39:1521:ORCL";
+    private static final String URL       = "jdbc:oracle:thin:@192.168.1.39:1521:orcl";
     /** 参数 */
     private static final String CLSDRIVER = "oracle.jdbc.OracleDriver";
     /** 参数 */
-    private static final String USERNME   = "qtpay";
+    private static final String USERNME   = "qtcredit";
+    /**密码*/
+    private static final String PWD       = "aaa111";
+
     /** 参数 */
-    private static final String PWD       = "qtpay";
 
     /**
      * getConnection:(获取数据库连接). <br/>
@@ -148,7 +150,8 @@ public class DBHelper {
      * changeClsName:(获取对像名). <br/>
      * 
      * @author Lance.Wu <br/>
-     * @param tableName tableName
+     * @param tableName
+     *            tableName
      * @return <br/>
      * @since JDK 1.6 PayIFramework 1.0 <br/>
      */
@@ -210,7 +213,8 @@ public class DBHelper {
      * changeDateType:(设置数据类型). <br/>
      * 
      * @author Lance.Wu <br/>
-     * @param dataType dataType
+     * @param dataType
+     *            dataType
      * @return <br/>
      * @since JDK 1.6 PayIFramework 1.0 <br/>
      */
@@ -246,7 +250,8 @@ public class DBHelper {
      * changeClsType:(获取java对像类蓴). <br/>
      * 
      * @author Lance.Wu <br/>
-     * @param dataType dataType
+     * @param dataType
+     *            dataType
      * @return <br/>
      * @since JDK 1.6 PayIFramework 1.0 <br/>
      */

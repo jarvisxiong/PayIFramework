@@ -12,6 +12,8 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.imobpay.base.log.LogPay;
+
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
@@ -398,7 +400,6 @@ public class Format {
         }
     }
 
-    
     /**
      * 字节数组转base64
      * 
@@ -470,8 +471,11 @@ public class Format {
         }
         return str.toString();
     }
-    
-    /**生成两位随机数*/
+
+    /**
+     * 生成两位随机数
+     * @return String
+     */
     public static String getTwoRand() {
         StringBuffer random = new StringBuffer();
         Random r = new Random();
@@ -480,10 +484,84 @@ public class Format {
         }
         return random.toString();
     }
-    public static void main(String[] args) {
-        for (int i = 0; i < 9999999; i++) {
-            System.out.println(getRandom());  
+
+    /**
+     * 
+     * 【方法名】    : 判断当前字符串是否为数字. <br/> 
+     * 【注意】: (这里描述这个方法的注意事项 – 可选).<br/> 
+     * 【作者】: 张朝辉 .<br/>
+     * 【时间】： 2016年10月18日 下午4:18:47 .<br/>
+     * 【参数】： .<br/>
+     * @param str 返回数字字符串
+     * @return .<br/>
+     * <p>
+     * 修改记录.<br/>
+     * 修改人: 张朝辉 修改描述：创建新新件 .<br/>
+     * <p/>
+     */
+    public static boolean isNumeric(String str) {
+        Pattern pattern = Pattern.compile("[0-9]*");
+        Matcher isNum = pattern.matcher(str);
+        if (!isNum.matches()) {
+            return false;
         }
+        return true;
+    }
+
+    /**
+     * 
+     * 【方法名】    : getloantime. <br/> 
+     * 【注意】: (这里描述这个方法的注意事项 – 可选).<br/> 
+     * 【作者】: 张朝辉 .<br/>
+     * 【时间】： 2016年10月18日 下午4:18:47 .<br/>
+     * 【参数】： .<br/>
+     * @param date 日期字符串
+     * @return .<br/>
+     * <p>
+     * 修改记录.<br/>
+     * 修改人: 张朝辉 修改描述：创建新新件 .<br/>
+     * <p/>
+     * @throws Exception 
+     */
+    public static boolean getloantime(String date) throws Exception  {
+        boolean flag = false;
+        Date date1 = null;
+        Date date2 = null;
+        SimpleDateFormat sf = new SimpleDateFormat("yyyyMMdd");
+        date1 = sf.parse(date);
+        date2 = sf.parse(formatDate());
+        long l = (date1.getTime() - date2.getTime()) / (1000 * 60 * 60 * 24);
+        LogPay.info("据需还款日："+l);
+        if (l>=0&&l < 4) {
+            flag = true;
+        }
+        return flag;
+
+    }
+    /**
+     * 
+     * @param args 传入参数
+     * @throws Exception 
+     * @throws ParseException
+     */
+    public static void main(String[] args) throws Exception{
+/*        String dateStr = "20161025";
+        boolean flag = false;
+        Date date = null;
+        Date nowDate = new Date();
+        SimpleDateFormat sf = new SimpleDateFormat("yyyyMMdd");
+        try {
+            date = sf.parse(dateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        long l = (date.getTime() - nowDate.getTime()) / (1000 * 60 * 60 * 24);
+        if (l < 4) {
+            System.out.println(l);
+        }
+        System.out.println(20161023 - 20161020);
+        System.out.println("没有到临近账单日");*/
         
+        System.out.println(getloantime("20161028"));
     }
 }

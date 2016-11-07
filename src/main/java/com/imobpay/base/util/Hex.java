@@ -1,6 +1,5 @@
 package com.imobpay.base.util;
 
-
 /**
  * 字节工具类 <br/>
  * 
@@ -150,8 +149,6 @@ public final class Hex {
         return toReversedString(b, 0, b.length);
     }
 
-    
-    
     /**
      * 
      * 方法名： String2Hexbyte.<br/>
@@ -160,21 +157,18 @@ public final class Hex {
      * 创建者：张朝辉.<br/>
      * 创建日期：2016年7月29日.<br/>
      * 创建时间：下午8:05:50.<br/>
-     * 参数或者异常：@param src
-     * 参数或者异常：@return .<br/>
+     * 参数或者异常：@param src 参数或者异常：@return .<br/>
      * 返回值： @return 返回结果：byte[].<br/>
      * 其它内容： JDK 1.6 PayIFramework 1.0.<br/>
      */
-    public static byte[] String2Hexbyte(String src)
-    {
+    public static byte[] String2Hexbyte(String src) {
         byte b[] = null;
         String temp = "";
-        if(src.length() % 2 != 0)
+        if (src.length() % 2 != 0)
             src = (new StringBuilder("0")).append(src).toString();
         b = new byte[src.length() / 2];
         int count = 0;
-        for(int i = 0; i < src.length(); i += 2)
-        {
+        for (int i = 0; i < src.length(); i += 2) {
             temp = src.substring(count * 2, count * 2 + 2);
             b[count] = Hex.fromString(temp)[0];
             count++;
@@ -182,7 +176,7 @@ public final class Hex {
 
         return b;
     }
-    
+
     /**
      * fromString(将十六进制形式的字符串转换为byte[]) <br/>
      *

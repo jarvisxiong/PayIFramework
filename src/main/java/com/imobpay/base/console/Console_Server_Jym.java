@@ -26,105 +26,131 @@ public final class Console_Server_Jym {
 
     /********************************** 公共服务交易码 **********************************************/
     /** 获取系统参数信息(TB_GLB_SYS_PARAM 表信息) */
-    public static final String JYM_GETTBGLBSYSPARAM    = "getTbGlbSysParam";
+    public static final String JYM_GETTBGLBSYSPARAM              = "getTbGlbSysParam";
 
     /********************************************************************************************/
 
     /********************************** 用户服务交易码 **********************************************/
     /** 用户信息查询 */
-    public static final String JYM_QUERYUSERINFO       = "QueryUserInfo";
+    public static final String JYM_QUERYUSERINFO                 = "QueryUserInfo";
     /** 记录身份证信息 */
-    public static final String JYM_RECORDPIDINFO       = "RecordPidInfo";
+    public static final String JYM_RECORDPIDINFO                 = "RecordPidInfo";
     /** 用户登录 */
-    public static final String JYM_USERLOGIN           = "UserLogin";
+    public static final String JYM_USERLOGIN                     = "UserLogin";
     /** 用户注册 */
-    public static final String JYM_USERREGISTER        = "userRegister";
+    public static final String JYM_USERREGISTER                  = "userRegister";
 
     /********************************************************************************************/
 
     /********************************** 短信服务交易码 **********************************************/
     /** 批量短信发送 */
-    public static final String JYM_BATCHSMS            = "BatchSms";
+    public static final String JYM_BATCHSMS                      = "BatchSms";
     /** 单条短信发送 */
-    public static final String JYM_SIMPLESMS           = "SimpleSms";
+    public static final String JYM_SIMPLESMS                     = "SimpleSms";
     /********************************************************************************************/
 
     /********************************** 查询服务 **********************************************/
     /** 查询banner图接口 */
-    public static final String JYM_SELECTPUBLICPIC     = "SelectPublicPic";
+    public static final String JYM_SELECTPUBLICPIC               = "SelectPublicPic";
     /** 查询app模块、底部模块和启动图 */
-    public static final String JYM_COMPARELOAD         = "CompareLoad";
+    public static final String JYM_COMPARELOAD                   = "CompareLoad";
     /** 手机充值交易码 */
-    public static final String JYM_MOBILERECHARGE      = "OFC001";
+    public static final String JYM_MOBILERECHARGE                = "OFC001";
     /********************************************************************************************/
 
     /********************************** AppServer服务 **********************************************/
-    public static final String JYM_AppMoudlesCompare   = "AppMoudlesCompare";
+    public static final String JYM_AppMoudlesCompare             = "AppMoudlesCompare";
     /********************************************************************************************/
 
     /********************************** 业务服务 **********************************************/
     /** 抓取用户信息 */
-    public static final String JYM_SAVETAKEUSERINFO    = "SaveTakeUserInfo";
+    public static final String JYM_SAVETAKEUSERINFO              = "SaveTakeUserInfo";
     /** 无忧还问卷信息入库 */
-    public static final String JYM_SERVICESWYHADDCUS   = "ServicesWyhAddCus";
+    public static final String JYM_SERVICESWYHADDCUS             = "ServicesWyhAddCus";
+    /** 手机运营商查询 */
+    public static final String JYM_SERVICESGETMOBILEOPERATORS    = "GetMobileOperators";
+    /** 手机运营商验证码请求 */
+    public static final String JYM_SERVICESGETVERIFICATIONCODE   = "GetVerificationCode";
+    /** 手机运营商验证码请求 */
+    public static final String JYM_SERVICESVERIFICATIONOPERATOR  = "VerificationOperator";
+    /** 客户手机信息获取 */
+    public static final String JYM_SERVICESGETMOBILECALLBACKINFO = "GetMobileCallBackInfo";
+    /** 客户手机信息获取 */
+    public static final String JYM_SERVICESGETREPORTBACKINFO     = "GetReportBackInfo";
+    /** 客户端首页查询 */
+    public static final String JYM_SERVICESGETHOMEDATA           = "GetHomeData";
     /********************************************************************************************/
 
     /********************************** 查询服务 **********************************************/
     /** 客户端更新接口 */
-    public static final String JYM_CLIENTUPDATE        = "ClientUpdate";
+    public static final String JYM_CLIENTUPDATE                  = "ClientUpdate";
     /** 获取是否信用升级 */
-    public static final String JYM_ISUSERUPGRADE       = "IsUserUpgrade";
+    public static final String JYM_ISUSERUPGRADE                 = "IsUserUpgrade";
     /** 获取升级规则信息 */
-    public static final String JYM_GETUPGRADERULE      = "GetUpgradeRule";
+    public static final String JYM_GETUPGRADERULE                = "GetUpgradeRule";
 
     /** 获取用户升级信息 */
-    public static final String JYM_USERUPGRADEINFO     = "UserUpgradeInfo";
+    public static final String JYM_USERUPGRADEINFO               = "UserUpgradeInfo";
     /** 获取用户须知信息 */
-    public static final String JYM_GETUSERNOTE         = "GetUserNote";
+    public static final String JYM_GETUSERNOTE                   = "GetUserNote";
     /** 获取公告接口信息 */
-    public static final String JYM_PREPCLIENTNOTICE    = "PrepClientNotice";
+    public static final String JYM_PREPCLIENTNOTICE              = "PrepClientNotice";
     /** 获取收付款费率信息 */
-    public static final String JYM_PAYMENTRECEIVEDRATE = "PaymentReceivedRate";
+    public static final String JYM_PAYMENTRECEIVEDRATE           = "PaymentReceivedRate";
     /** 获取用户剩余抽奖次数 */
-    public static final String JYM_QUERYUSERLOTCOUNT   = "QueryUserLotCount";
+    public static final String JYM_QUERYUSERLOTCOUNT             = "QueryUserLotCount";
     /** 查询中奖记录 */
-    public static final String JYM_QUERYWINRECORD      = "QueryWinRecord";
+    public static final String JYM_QUERYWINRECORD                = "QueryWinRecord";
+    /** 查询瑞粉返佣发放记录 */
+    public static final String JYM_SELECTSENDREBATERECORD        = "SelectSendRebateRecord";
 
     /********************************************************************************************/
 
     /********************************** 业务服务 **********************************************/
 
     /** 审核信用等级操作处理 */
-    public static final String JYM_AUDITCREDITGRADE    = "AuditCreditGrade";
+    public static final String JYM_AUDITCREDITGRADE              = "AuditCreditGrade";
 
     /** 判断是否走四要素验证 */
-    public static final String JYM_JUDGEIFVERIFYCARD   = "Verify100001";
+    public static final String JYM_JUDGEIFVERIFYCARD             = "Verify100001";
     /** 四要素验证 */
-    public static final String JYM_VERIFYCARD4         = "Verify100002";
+    public static final String JYM_VERIFYCARD4                   = "Verify100002";
+    /** 获取无忧还交易记录接口 */
+    public static final String JYM_GETLOANRECORD                 = "GetLoanRecord";
+    /** 获取无忧还查询贷款页信息 */
+    public static final String JYM_GETLOANDESC                   = "GetLoanDesc";
+
+    /** 无忧还 上传用户认证信息接口 */
+    public static final String JYM_UPLOADUSERMESSAGE             = "UploadUserMessage";
+    /** 无忧还 查询用户认证基本信息接口 */
+    public static final String JYM_GETUSERMESSAGE                = "GetUserMessage";
+    /** 无忧还 查询基本数据接口 */
+    public static final String JYM_GETBASEDATA                   = "GetBaseData";
     /********************************************************************************************/
     /********************************** 卡服务 **********************************************/
 
     /** 修改卡状态 */
-    public static final String JYM_UPCARDSTATUS        = "UpCardStatus";
+    public static final String JYM_UPCARDSTATUS                  = "UpCardStatus";
+    /** 修改绑定卡信息 */
+    public static final String JYM_UPDATEBINDCARD                = "UpdateBindCard";
     /********************************************************************************************/
 
     /********************************** 短信服务 **********************************************/
 
     /** 实时、下推短信入口 */
-    public static final String JYM_DWSMS1001           = "DWSMS1001";
+    public static final String JYM_DWSMS1001                     = "DWSMS1001";
 
     /********************************************************************************************/
-
     /********************************** 微信服务 **********************************************/
 
     /** 合作方查询订单入口 */
-    public static final String JYM_SEARCHORDERID          = "SearchOrderID";
+    public static final String JYM_SEARCHORDERID                 = "SearchOrderID";
     /** 合作方请求订单入口 */
-    public static final String JYM_SENDORDERID         = "SendOrderID";
+    public static final String JYM_SENDORDERID                   = "SendOrderID";
     /** 微信支付请求入口 */
-    public static final String JYM_SMZF100001           = "SMZF100001";
+    public static final String JYM_SMZF100001                    = "SMZF100001";
     /** 微信支付请求入口 */
-    public static final String JYM_SMZF100002           = "SMZF100002";
+    public static final String JYM_SMZF100002                    = "SMZF100002";
 
     /********************************************************************************************/
 
