@@ -18,76 +18,75 @@ import com.imobpay.base.log.LogPay;
 
 /**
  * 
- * 类名: JunitBase <br/>
- * 作用：调用老系统工具类<br/>
- * 创建者: HuaiYu.Wen. <br/>
- * 添加时间: 2016年7月29日 下午1:19:41 <br/>
- * 版本：
- * 
+ * 类名: JunitBase <br/> 
+ * 作用：调用老系统工具类<br/> 
+ * 创建者: HuaiYu.Wen. <br/> 
+ * 添加时间: 2016年7月29日 下午1:19:41 <br/> 
+ * 版本： 
  * @since JDK 1.6 PayIFramework 1.0
  */
 public class JunitBase {
 
     /** 范围地址. */
-    public static String         url          = "http://localhost:8080/TSM/tsm";
+    public static String url = "http://localhost:8080/TSM/tsm";
 
     /** key值. */
-    private String               key;
+    private String key;
 
     /** 请求连接. */
-    private HttpURLConnection    connection;
+    private HttpURLConnection connection;
 
     /** 缓存ID. */
-    private String               jsessionId   = null;
+    private String jsessionId = null;
     /** 是否加密. */
-    private boolean              isEnc        = false;
+    private boolean isEnc = false;
     /** 计数器. */
-    private int                  count        = 0;
+    private int count = 0;
 
     /** 报文编码. */
-    private static final String  ENC_CODE     = "UTF-8";
+    private static final String ENC_CODE = "UTF-8";
 
     /** bits per input character. 8 - ASCII; 16 - Unicode */
-    private static final int     CHRSZ        = 8;
+    private static final int CHRSZ = 8;
 
     /**
      * hex output format. false -lowercase; true - uppercase.
      * 
      */
-    private static final boolean HEXCASE      = false;
+    private static final boolean HEXCASE = false;
 
     /**
      * 16进制常量.
      */
-    private static final int     HEX_0F       = 0x0F;
+    private static final int HEX_0F = 0x0F;
 
     /**
      * 16进制常量.
      */
-    private static final int     HEX_FF       = 0xFF;
+    private static final int HEX_FF = 0xFF;
 
-    static String[]              byteHexTable = { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "0A", "0B", "0C", "0D", "0E", "0F", "10", "11", "12", "13", "14", "15", "16", "17", "18",
-            "19", "1A", "1B", "1C", "1D", "1E", "1F", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "2A", "2B", "2C", "2D", "2E", "2F", "30", "31", "32", "33", "34", "35", "36", "37",
-            "38", "39", "3A", "3B", "3C", "3D", "3E", "3F", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "4A", "4B", "4C", "4D", "4E", "4F", "50", "51", "52", "53", "54", "55", "56",
-            "57", "58", "59", "5A", "5B", "5C", "5D", "5E", "5F", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "6A", "6B", "6C", "6D", "6E", "6F", "70", "71", "72", "73", "74", "75",
-            "76", "77", "78", "79", "7A", "7B", "7C", "7D", "7E", "7F", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "8A", "8B", "8C", "8D", "8E", "8F", "90", "91", "92", "93", "94",
-            "95", "96", "97", "98", "99", "9A", "9B", "9C", "9D", "9E", "9F", "A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "AA", "AB", "AC", "AD", "AE", "AF", "B0", "B1", "B2", "B3",
-            "B4", "B5", "B6", "B7", "B8", "B9", "BA", "BB", "BC", "BD", "BE", "BF", "C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "CA", "CB", "CC", "CD", "CE", "CF", "D0", "D1", "D2",
-            "D3", "D4", "D5", "D6", "D7", "D8", "D9", "DA", "DB", "DC", "DD", "DE", "DF", "E0", "E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "EA", "EB", "EC", "ED", "EE", "EF", "F0", "F1",
-            "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "FA", "FB", "FC", "FD", "FE", "FF", };
+    static String[] byteHexTable = { "00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "0A", "0B", "0C", "0D", "0E", "0F", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "1A",
+            "1B", "1C", "1D", "1E", "1F", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "2A", "2B", "2C", "2D", "2E", "2F", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39",
+            "3A", "3B", "3C", "3D", "3E", "3F", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "4A", "4B", "4C", "4D", "4E", "4F", "50", "51", "52", "53", "54", "55", "56", "57", "58",
+            "59", "5A", "5B", "5C", "5D", "5E", "5F", "60", "61", "62", "63", "64", "65", "66", "67", "68", "69", "6A", "6B", "6C", "6D", "6E", "6F", "70", "71", "72", "73", "74", "75", "76", "77",
+            "78", "79", "7A", "7B", "7C", "7D", "7E", "7F", "80", "81", "82", "83", "84", "85", "86", "87", "88", "89", "8A", "8B", "8C", "8D", "8E", "8F", "90", "91", "92", "93", "94", "95", "96",
+            "97", "98", "99", "9A", "9B", "9C", "9D", "9E", "9F", "A0", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "AA", "AB", "AC", "AD", "AE", "AF", "B0", "B1", "B2", "B3", "B4", "B5",
+            "B6", "B7", "B8", "B9", "BA", "BB", "BC", "BD", "BE", "BF", "C0", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "CA", "CB", "CC", "CD", "CE", "CF", "D0", "D1", "D2", "D3", "D4",
+            "D5", "D6", "D7", "D8", "D9", "DA", "DB", "DC", "DD", "DE", "DF", "E0", "E1", "E2", "E3", "E4", "E5", "E6", "E7", "E8", "E9", "EA", "EB", "EC", "ED", "EE", "EF", "F0", "F1", "F2", "F3",
+            "F4", "F5", "F6", "F7", "F8", "F9", "FA", "FB", "FC", "FD", "FE", "FF", };
 
     /**
      * The internal state associated with this pseudorandom number generator.
-     * (The specs for the methods in this class describe the ongoing computation
-     * of this value.)
+     * (The specs for the methods in this class describe the ongoing
+     * computation of this value.)
      *
      * @serial
      */
-    private final AtomicLong     seed         = new AtomicLong(0L);
+    private final AtomicLong seed = new AtomicLong(0L);
 
-    private final static long    multiplier   = 0x5DEECE66DL;
-    private final static long    addend       = 0xBL;
-    private final static long    mask         = (1L << 48) - 1;
+    private final static long multiplier = 0x5DEECE66DL;
+    private final static long addend = 0xBL;
+    private final static long mask = (1L << 48) - 1;
 
     /**
      * 构造.
@@ -331,15 +330,14 @@ public class JunitBase {
      *            需要转换的byte[]
      * @return String 得到的十六进制的字符串 java.lang.String
      * 
-     *         <pre>
-     * 案例：
+     *         <pre>  案例：
      * 
      *         String str = "hello";
      *         byte[] data = str.getBytes();
      *         String hex = hex(data);
      *         
      *         结果： hex : 68656C6C6F
-     * </pre>
+     *         </pre>
      */
     public static String hex(byte[] dst) {
         StringBuffer sb = new StringBuffer();
@@ -756,63 +754,58 @@ public class JunitBase {
     }
 
     /**
-     * Returns a pseudorandom, uniformly distributed {@code int} value between 0
-     * (inclusive) and the specified value (exclusive), drawn from this random
-     * number generator's sequence. The general contract of {@code nextInt} is
-     * that one {@code int} value in the specified range is pseudorandomly
-     * generated and returned. All {@code n} possible {@code int} values are
-     * produced with (approximately) equal probability. The method
-     * {@code nextInt(int n)} is implemented by class {@code Random} as if by:
-     * 
-     * <pre>
-     * {@code
+     * Returns a pseudorandom, uniformly distributed {@code int} value
+     * between 0 (inclusive) and the specified value (exclusive), drawn from
+     * this random number generator's sequence.  The general contract of
+     * {@code nextInt} is that one {@code int} value in the specified range
+     * is pseudorandomly generated and returned.  All {@code n} possible
+     * {@code int} values are produced with (approximately) equal
+     * probability.  The method {@code nextInt(int n)} is implemented by
+     * class {@code Random} as if by:
+     *  <pre> {@code
      * public int nextInt(int n) {
      *   if (n <= 0)
      *     throw new IllegalArgumentException("n must be positive");
-     * 
+     *
      *   if ((n & -n) == n)  // i.e., n is a power of 2
      *     return (int)((n * (long)next(31)) >> 31);
-     * 
+     *
      *   int bits, val;
      *   do {
      *       bits = next(31);
      *       val = bits % n;
      *   } while (bits - val + (n-1) < 0);
      *   return val;
-     * }}
-     * </pre>
+     * }}</pre>
      *
-     * <p>
-     * The hedge "approximately" is used in the foregoing description only
+     * <p>The hedge "approximately" is used in the foregoing description only
      * because the next method is only approximately an unbiased source of
-     * independently chosen bits. If it were a perfect source of randomly chosen
-     * bits, then the algorithm shown would choose {@code int} values from the
-     * stated range with perfect uniformity.
+     * independently chosen bits.  If it were a perfect source of randomly
+     * chosen bits, then the algorithm shown would choose {@code int}
+     * values from the stated range with perfect uniformity.
      * <p>
-     * The algorithm is slightly tricky. It rejects values that would result in
-     * an uneven distribution (due to the fact that 2^31 is not divisible by n).
-     * The probability of a value being rejected depends on n. The worst case is
-     * n=2^30+1, for which the probability of a reject is 1/2, and the expected
-     * number of iterations before the loop terminates is 2.
+     * The algorithm is slightly tricky.  It rejects values that would result
+     * in an uneven distribution (due to the fact that 2^31 is not divisible
+     * by n). The probability of a value being rejected depends on n.  The
+     * worst case is n=2^30+1, for which the probability of a reject is 1/2,
+     * and the expected number of iterations before the loop terminates is 2.
      * <p>
      * The algorithm treats the case where n is a power of two specially: it
      * returns the correct number of high-order bits from the underlying
-     * pseudo-random number generator. In the absence of special treatment, the
-     * correct number of <i>low-order</i> bits would be returned. Linear
-     * congruential pseudo-random number generators such as the one implemented
-     * by this class are known to have short periods in the sequence of values
-     * of their low-order bits. Thus, this special case greatly increases the
-     * length of the sequence of values returned by successive calls to this
-     * method if n is a small power of two.
+     * pseudo-random number generator.  In the absence of special treatment,
+     * the correct number of <i>low-order</i> bits would be returned.  Linear
+     * congruential pseudo-random number generators such as the one
+     * implemented by this class are known to have short periods in the
+     * sequence of values of their low-order bits.  Thus, this special case
+     * greatly increases the length of the sequence of values returned by
+     * successive calls to this method if n is a small power of two.
      *
-     * @param n
-     *            the bound on the random number to be returned. Must be
-     *            positive.
-     * @return the next pseudorandom, uniformly distributed {@code int} value
-     *         between {@code 0} (inclusive) and {@code n} (exclusive) from this
-     *         random number generator's sequence
-     * @exception IllegalArgumentException
-     *                if n is not positive
+     * @param n the bound on the random number to be returned.  Must be
+     *        positive.
+     * @return the next pseudorandom, uniformly distributed {@code int}
+     *         value between {@code 0} (inclusive) and {@code n} (exclusive)
+     *         from this random number generator's sequence
+     * @exception IllegalArgumentException if n is not positive
      * @since 1.2
      */
 
@@ -855,38 +848,29 @@ public class JunitBase {
     }
 
     /**
-     * Generates the next pseudorandom number. Subclasses should override this,
-     * as this is used by all other methods.
+     * Generates the next pseudorandom number. Subclasses should
+     * override this, as this is used by all other methods.
      *
-     * <p>
-     * The general contract of {@code next} is that it returns an {@code int}
-     * value and if the argument {@code bits} is between {@code 1} and
-     * {@code 32} (inclusive), then that many low-order bits of the returned
-     * value will be (approximately) independently chosen bit values, each of
-     * which is (approximately) equally likely to be {@code 0} or {@code 1}. The
-     * method {@code next} is implemented by class {@code Random} by atomically
-     * updating the seed to
-     * 
-     * <pre>
-     * {@code (seed * 0x5DEECE66DL + 0xBL) & ((1L << 48) - 1)}
-     * </pre>
-     * 
+     * <p>The general contract of {@code next} is that it returns an
+     * {@code int} value and if the argument {@code bits} is between
+     * {@code 1} and {@code 32} (inclusive), then that many low-order
+     * bits of the returned value will be (approximately) independently
+     * chosen bit values, each of which is (approximately) equally
+     * likely to be {@code 0} or {@code 1}. The method {@code next} is
+     * implemented by class {@code Random} by atomically updating the seed to
+     *  <pre>{@code (seed * 0x5DEECE66DL + 0xBL) & ((1L << 48) - 1)}</pre>
      * and returning
-     * 
-     * <pre>
-     * {@code (int)(seed >>> (48 - bits))}.
-     * </pre>
+     *  <pre>{@code (int)(seed >>> (48 - bits))}.</pre>
      *
-     * This is a linear congruential pseudorandom number generator, as defined
-     * by D. H. Lehmer and described by Donald E. Knuth in <i>The Art of
-     * Computer Programming,</i> Volume 3: <i>Seminumerical Algorithms</i>,
-     * section 3.2.1.
+     * This is a linear congruential pseudorandom number generator, as
+     * defined by D. H. Lehmer and described by Donald E. Knuth in
+     * <i>The Art of Computer Programming,</i> Volume 3:
+     * <i>Seminumerical Algorithms</i>, section 3.2.1.
      *
-     * @param bits
-     *            random bits
-     * @return the next pseudorandom value from this random number generator's
-     *         sequence
-     * @since 1.1
+     * @param  bits random bits
+     * @return the next pseudorandom value from this random number
+     *         generator's sequence
+     * @since  1.1
      */
     protected int next(int bits) {
         long oldseed, nextseed;
@@ -910,7 +894,7 @@ public class JunitBase {
      *            请求报文
      * @return String
      */
-    public static String creditMessage(String content) {
+    public static  String creditMessage(String content) {
 
         String randonStr = createRandomNumber(Integer.parseInt("6"));
         String resultMsg = null;
@@ -918,7 +902,7 @@ public class JunitBase {
             byte[] data = null;
             data = content.getBytes("UTF-8");
             byte[] random = randonStr.getBytes();
-            String macData = randonStr + Hex.toString(data); // Tools.byteArrayToHexString(data);
+            String macData = randonStr +  Hex.toString(data); //Tools.byteArrayToHexString(data);
             macData = getMac(macData);
             byte[] mac = macData.getBytes();
             int len = mac.length + random.length + data.length;

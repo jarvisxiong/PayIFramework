@@ -103,12 +103,10 @@ public class Tools {
         if (count > 0) {
             if (src.getBytes().length < count) {
                 String fills = "";
-                if (in == null || "".equals(in)) {
+                if (in == null || in.equals(""))
                     in = "0";
-                }
-                for (int i = 0; i < count; i++) {
+                for (int i = 0; i < count; i++)
                     fills = (new StringBuilder(String.valueOf(fills))).append(in).toString();
-                }
 
                 return (new StringBuilder(String.valueOf(fills.substring(0, fills.getBytes().length - src.getBytes().length)))).append(src).toString();
             } else {
@@ -239,22 +237,6 @@ public class Tools {
     public static String getnullString(String string) {
         // 如果传入字符串不为空直接返回，如果为空，则返回空字符。
         return EmptyChecker.isNotEmpty(string) ? string : "";
-    }
-
-    /**
-     * 
-     * isBlank:. <br/>
-     * 
-     * @author CAOWENJUN
-     * @param str
-     * @return
-     * @since JDK 1.6
-     */
-    public static boolean isBlank(String str) {
-        if (str == null || str.trim().length() == 0 || "null".equals(str)) {
-            return true;
-        }
-        return false;
     }
 
 }
