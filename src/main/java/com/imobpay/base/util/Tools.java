@@ -106,7 +106,7 @@ public class Tools {
                 if (in == null || "".equals(in)) {
                     in = "0";
                 }
-                for (int i = 0; i < count; i++) {
+                for (int i = 0; i < count; i++){
                     fills = (new StringBuilder(String.valueOf(fills))).append(in).toString();
                 }
 
@@ -233,28 +233,13 @@ public class Tools {
      * 创建者：张朝辉.<br/>
      * 创建日期：2016年8月4日.<br/>
      * 创建时间：下午7:17:50.<br/>
-     * 参数或者异常：@param string 返回值： @return 返回结果：String.<br/>
+     * 参数或者异常：@param string 
+     * 返回值： @return 返回结果：String.<br/>
      * 其它内容： JDK 1.6 PaySearchServer 1.0.<br/>
      */
     public static String getnullString(String string) {
         // 如果传入字符串不为空直接返回，如果为空，则返回空字符。
         return EmptyChecker.isNotEmpty(string) ? string : "";
-    }
-
-    /**
-     * 
-     * isBlank:. <br/>
-     * 
-     * @author CAOWENJUN
-     * @param str
-     * @return
-     * @since JDK 1.6
-     */
-    public static boolean isBlank(String str) {
-        if (str == null || str.trim().length() == 0 || "null".equals(str)) {
-            return true;
-        }
-        return false;
     }
 
 }

@@ -28,26 +28,25 @@ public class MapResultBean<T> extends ReultErrorBean {
     /**
      * 列表对象返回类
      */
-    private List<?> resultBean;
+    private List<?>            resultBean;
     /**
      * 对象返回
      */
-    private T resultBeans;
- 
+    private T                  resultBeans;
+
     /**
      * 过滤器方法
      */
     private static ValueFilter filter = new ValueFilter() {
-        @Override
-        public Object process(Object obj, String s, Object v) {
-            if (v == null){
-                return "";
+            @Override
+            public Object process(Object obj, String s, Object v) {
+                if (v == null) {
+                    return "";
+                }
+                return v;
             }
-            return v;
-        }
-    };
-    
-    
+        };
+
     @Override
     public String returnBeanJson(String msgCode, String msgText) {
         Map<String, Object> resultMap = new HashMap<String, Object>();
@@ -55,8 +54,7 @@ public class MapResultBean<T> extends ReultErrorBean {
         resultMap.put(Console_Column.MSG_TEXT, msgText);
         return JSONObject.toJSONString(resultMap, filter, SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty);
     }
-    
-    
+
     /**
      * 
      * 方法名： getTotalResult.<br/>
@@ -66,8 +64,8 @@ public class MapResultBean<T> extends ReultErrorBean {
      * 创建日期：2016年7月5日.<br/>
      * 创建时间：上午9:49:55.<br/>
      * 参数者异常：@param resultBean
-     * 参数者异常：@param resultCode
-     * 参数者异常：@param message
+     * 参数者异常：@param msgCode 返回码
+     * 参数者异常：@param msgText 返回描述
      * 参数者异常：@return String.<br/>
      * 其它内容： JDK 1.6 PayUserServer 1.0.<br/>
      */
@@ -76,9 +74,10 @@ public class MapResultBean<T> extends ReultErrorBean {
         resultMap.put(Console_Column.MSG_CODE, msgCode);
         resultMap.put(Console_Column.MSG_TEXT, msgText);
         resultMap.put(Console_Column.RESULTBEAN, resultBean);
-        return JSONObject.toJSONString(resultMap, filter, SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty,SerializerFeature.DisableCircularReferenceDetect);
+        return JSONObject.toJSONString(resultMap, filter, SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.DisableCircularReferenceDetect);
 
     }
+
     /**
      * 
      * 方法名： getTotalResult.<br/>
@@ -89,20 +88,18 @@ public class MapResultBean<T> extends ReultErrorBean {
      * 参数或者异常：@param resultBeans
      * 参数或者异常：@param msgCode
      * 参数或者异常：@param msgText
-     * 参数或者异常：@return .<br/>
-     * 返回值： @return 返回结果：String.<br/>
+     * 返回值： @return String.<br/>
      * 其它内容： JDK 1.6 PayIFramework 1.0.<br/>
      */
-    public String getTotalResult( T resultBeans, String msgCode, String msgText) {
+    public String getTotalResult(T resultBeans, String msgCode, String msgText) {
         Map<String, Object> resultMap = new HashMap<String, Object>();
         resultMap.put(Console_Column.MSG_CODE, msgCode);
-        resultMap.put(Console_Column.MSG_TEXT, msgText); 
-        resultMap.put(Console_Column.RESULTBEAN, resultBeans); 
-        return JSONObject.toJSONString(resultMap, filter, SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty,SerializerFeature.DisableCircularReferenceDetect);
+        resultMap.put(Console_Column.MSG_TEXT, msgText);
+        resultMap.put(Console_Column.RESULTBEAN, resultBeans);
+        return JSONObject.toJSONString(resultMap, filter, SerializerFeature.WriteMapNullValue, SerializerFeature.WriteNullStringAsEmpty, SerializerFeature.DisableCircularReferenceDetect);
 
     }
-    
-    
+
     /** 
      * 方法名： getResultBean.<br/>
      *  
@@ -120,7 +117,6 @@ public class MapResultBean<T> extends ReultErrorBean {
     public List<?> getResultBean() {
         return resultBean;
     }
-
 
     /** 
      * 方法名： setResultBean.<br/>
@@ -140,7 +136,6 @@ public class MapResultBean<T> extends ReultErrorBean {
         this.resultBean = resultBean;
     }
 
-
     /** 
      * 方法名： getResultBeans.<br/>
      *  
@@ -159,7 +154,6 @@ public class MapResultBean<T> extends ReultErrorBean {
         return resultBeans;
     }
 
-
     /** 
      * 方法名： setResultBeans.<br/>
      *  
@@ -177,6 +171,5 @@ public class MapResultBean<T> extends ReultErrorBean {
     public void setResultBeans(T resultBeans) {
         this.resultBeans = resultBeans;
     }
-
 
 }
