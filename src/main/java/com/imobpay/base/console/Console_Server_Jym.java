@@ -103,16 +103,6 @@ public final class Console_Server_Jym {
     public static final String JYM_QUERYWINRECORD                = "QueryWinRecord";
     /** 查询瑞粉返佣发放记录 */
     public static final String JYM_SELECTSENDREBATERECORD        = "SelectSendRebateRecord";
-    /** 查询人脉关系 */
-    public static final String JYM_SELECTCONTACTS                = "SelectContacts";
-    /** 查询返佣记录 */
-    public static final String JYM_SELECTREBATERECORD            = "SelectRebateRecord";
-    /** 查询首页资产信息 */
-    public static final String JYM_SELECTREBATEINFO              = "SelectRebateInfo";
-    /** 查询瑞粉公告消息 */
-    public static final String JYM_SELECTFANSNOTICE              = "SelectFansNotice";
-    /** 查询系统参数 */
-    public static final String JYM_SELECTSYSPARAM                = "SelectSysParam";
 
     /********************************************************************************************/
 
@@ -144,4 +134,12 @@ public final class Console_Server_Jym {
     /** 修改绑定卡信息 */
     public static final String JYM_UPDATEBINDCARD                = "UpdateBindCard";
     /********************************************************************************************/
+
+    /********************************** 短信服务 **********************************************/
+
+    /** 实时、下推短信入口 */
+    public static final String JYM_DWSMS1001           = "DWSMS1001";
+
+    /********************************************************************************************/
+
 }

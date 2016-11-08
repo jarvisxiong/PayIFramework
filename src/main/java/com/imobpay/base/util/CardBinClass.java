@@ -122,29 +122,4 @@ public class CardBinClass {
             throw new QTException(Console_ErrCode.PARAM_EMPTY, Console_ErrCode.ERROR_BIND_TYPE);
         }
     }
-
-    /**
-     * 
-     * 【方法名】 : (判断哪些交易类型需要判断是否为本人). <br/>
-     * 【作者】: madman .<br/>
-     * 【时间】： 2016年11月2日 下午2:51:15 .<br/>
-     * 【参数】： .<br/>
-     * 
-     * @param bindType
-     *            绑定类型
-     * @param holder
-     *            是否为本人
-     * @return 返回结果
-     * @throws QTException .<br/>
-     *         <p>
-     *         修改记录.<br/>
-     *         修改人: madman 修改描述：创建新新件 .<br/>
-     *         <p/>
-     */
-    public static boolean checkBindTypeHolder(String bindType, boolean holder) throws QTException {
-        if ("RF".equals(bindType) && holder) {
-            return true;
-        }
-        return false;
-    }
 }

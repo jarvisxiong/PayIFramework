@@ -96,9 +96,14 @@ public final class Console_ErrCode {
     /** 配置参数异常 */
     public static final String ERROR9218               = "9218";
     /** 应用类型不存在 */
-    public static final String ERROR8903               = "8903";
-    /** 卡服务返回码：此卡已被绑定,请换卡 _9103 */
-    public static final String CARDSERVER_CODE_9103    = "9103";
+    public static final String ERROR8903                 = "8903";
+    /** 卡服务返回码：此卡已被绑定,请换卡 _9103*/
+    public static final String CARDSERVER_CODE_9103      = "9103";
+    /********************************************************************************************/
+
+    /********************************** SmsServer错误返回码 **************************************/
+    /** 下推失败返回码 */
+    public static final String DP_FAIL                   = "0099";
     /********************************************************************************************/
 
     /********************** 中文描述 ********************/
@@ -237,10 +242,35 @@ public final class Console_ErrCode {
     public static final String NO_WHITELIST            = "当前客户不在白名单内";
     /** 层级类型错误 */
     public static final String ERROR_LEVEL             = "层级类型错误";
+
     /** 验证码发送失败 */
     public static final String MESSAGE_FAILED          = "验证码发送失败";
     /** 返回手机号或身份证为空 */
     public static final String MOBILENO_EMPTY          = "返回手机号或身份证为空";
-    /** 只能绑本人卡,请重新输入 */
-    public static final String HOLDER_ERROR            = "只能绑本人卡,请重新输入";
+	
+	
+	
+	   /** 手机号不合法  */
+    public static final String ERROR_MOBILENO            = "手机号不合法";
+    /** 短信服务不可用  */
+    public static final String SMS_NOSERVER              = "短信服务不可用";
+    /** 短信长度超限  */
+    public static final String SMS_LEN_MSG               = "短信长度超限";
+    /** 短信内容不合规  */
+    public static final String SMS_VERI_ILLEGAL_CHAR_MSG = "短信内容不合规";
+    /** 该用户是黑名单  */
+    public static final String SMS_BLACK_CUST_MSG        = "该用户已列入黑名单";
+    /** 请求订单号已存在  */
+    public static final String SMS_ORDERNO_REPEAT        = "请求订单号已存在";
+    /**没有可用通道  */
+    public static final String SMS_NOCHANNEL_MSG         = "没有可用通道";
+    /**签名未配置  */
+    public static final String SMS_NOSIGN_MSG            = "签名未配置";
+    /**发送短信失败 */
+    public static final String SMS_FAIL_MSG              = "失败";
+    /**成功 */
+    public static final String SMS_SUCCESS_MSG           = "成功";
+    /**极光推送推送配置表的数据未配置*/
+    public static final String DP_NODATA_MSG             = "推送配置表的数据未配置";
+
 }
