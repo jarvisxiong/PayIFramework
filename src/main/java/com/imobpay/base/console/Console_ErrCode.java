@@ -105,7 +105,24 @@ public final class Console_ErrCode {
     /** 下推失败返回码 */
     public static final String DP_FAIL                   = "0099";
     /********************************************************************************************/
-
+    
+    /********************************** UserServer错误返回码 **************************************/
+    /**TA卡已失效[TA]返回码*/
+    public static final String URL_NOEXITISCODE        = "9198";
+    /**TA卡已绑定[TA]返回码*/
+    public static final String NOTE_BINDEDCODE         = "9175";
+    /**TA卡号已注册[TA]返回码*/
+    public static final String NOTE_REGISTEREDCODE     = "9191";
+    /**银行卡信息有误[TA]返回码*/
+    public static final String NOTE_BANKINFODCODE      = "9190";
+    /**只能绑定借记卡[TA]返回码*/
+    public static final String NOTE_BINDDEBITCODE      = "9189";
+    /**机构号不存在[TA]返回码*/
+    public static final String NOTE_NOBRANCHIDCODE     = "9188";
+    /**手机号已注册[TA]返回码*/
+    public static final String NOTE_MOBILENOYETCODE    = "9192";
+    /********************************************************************************************/
+    
     /********************** 中文描述 ********************/
 
     /** 交易码为空 */
@@ -186,7 +203,7 @@ public final class Console_ErrCode {
     /** CUSTOMERID不存在 */
     public static final String NO_CUSTOMERID           = "CUSTOMERID不存在";
     /** 当前等级无描述信息 */
-    public static final String NO_lEVELDESC            = "当前等级无描述信息";
+    public static final String NO_LEVELDESC            = "当前等级无描述信息";
     /** 应用参数为空 */
     public static final String APPUSER_EMPTYDESC       = "应用请求参数为空";
     /** 模块参数为空 */
@@ -275,4 +292,19 @@ public final class Console_ErrCode {
     /**极光推送推送配置表的数据未配置*/
     public static final String DP_NODATA_MSG             = "推送配置表的数据未配置";
 
+    /**TA卡已失效[TA]返回描述*/
+    public static final String URL_NOEXITISDESC          = "TA卡已失效[TA]";
+    /**TA卡已绑定[TA]返回描述*/
+    public static final String NOTE_BINDEDDESC           = "TA卡已绑定[TA]";
+    /**TA卡号已注册[TA]返回描述*/
+    public static final String NOTE_REGISTEREDDESC       = "TA卡号已注册[TA]";
+    /**银行卡信息有误[TA]返回描述*/
+    public static final String NOTE_BANKINFODESC         = "银行卡信息有误,请确认[TA]";
+    /**只能绑定借记卡[TA]返回描述*/
+    public static final String NOTE_BINDDEBITDESC        = "只能绑定借记卡[TA]";
+    /**机构号不存在[TA]返回描述*/
+    public static final String NOTE_NOBRANCHIDDESC       = "机构号不存在[TA]";
+    /**手机号已注册[TA]返回描述*/
+    public static final String NOTE_MOBILENOYETDESC      = "手机号已注册[TA]";
+    
 }
