@@ -39,6 +39,9 @@ public final class Console_Server_Jym {
     public static final String JYM_USERLOGIN                     = "UserLogin";
     /** 用户注册 */
     public static final String JYM_USERREGISTER                  = "userRegister";
+    /** 用户注册TA */
+    public static final String JYM_TAUSERREGISTER                = "TaUserRegister";
+    
 
     /********************************************************************************************/
 
