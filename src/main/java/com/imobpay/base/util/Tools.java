@@ -231,7 +231,8 @@ public class Tools {
      * 创建者：张朝辉.<br/>
      * 创建日期：2016年8月4日.<br/>
      * 创建时间：下午7:17:50.<br/>
-     * 参数或者异常：@param string 返回值： @return 返回结果：String.<br/>
+     * 参数或者异常：@param string 
+     * 返回值： @return 返回结果：String.<br/>
      * 其它内容： JDK 1.6 PaySearchServer 1.0.<br/>
      */
     public static String getnullString(String string) {

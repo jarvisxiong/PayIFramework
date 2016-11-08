@@ -15,16 +15,16 @@ import java.util.Date;
  */
 public final class DateUtil {
 
-    /** 日期时间格式 */
+    /** 日期时间格式  */
     public static final String YYYYMMDDHHMMSS = "yyyyMMddHHmmss";
 
-    /** 日期 格式 */
-    public static final String YYYYMMDD       = "yyyyMMdd";
     /** 日期 格式 年月 */
     public static final String YYYYMM         = "yyyyMM";
+    /** 日期 格式*/
+    public static final String YYYYMMDD = "yyyyMMdd";
 
     /** 时间格式 */
-    public static final String HHMMSS         = "HHmmss";
+    public static final String HHMMSS = "HHmmss";
 
     /**
      * getCurrDate:(获取当前日期). <br/>
