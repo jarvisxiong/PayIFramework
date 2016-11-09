@@ -82,5 +82,7 @@ public final class Console_Resp_Column {
     public static final String PARAM_VALUE         = "paramValue";
     /** 瑞粉吧 公告编号 */
     public static final String NOTICE_CODE         = "noticeCode";
+    /** 瑞粉吧 订单号 */
+    public static final String ORDER_ID            = "orderId";
 
 }

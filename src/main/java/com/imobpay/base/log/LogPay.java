@@ -86,6 +86,7 @@ public class LogPay {
             if (!logFile.exists()) {
                 throw new JoranException("this file path is null : " + filePath);
             }
+            System.out.println("加载日志文件目录："+logFile);
             configurator.doConfigure(logFile);
             StatusPrinter.print(lc.getStatusManager());
         } catch (JoranException e) {

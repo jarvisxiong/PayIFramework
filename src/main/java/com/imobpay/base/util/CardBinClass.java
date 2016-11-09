@@ -21,9 +21,11 @@ import com.imobpay.base.exception.QTException;
 public class CardBinClass {
 
     /** 卡类型列表 */
-    public static Map<String, String> cType    = new HashMap<String, String>();
+    public static Map<String, String> cType       = new HashMap<String, String>();
     /** 业务类型集合 */
-    public static List<String>        bindType = new ArrayList<String>();
+    public static List<String>        bindType    = new ArrayList<String>();
+    /** 业务类型集合 */
+    public static Map<String, String> contactsMap = new HashMap<String, String>();
 
     /** 添加初始类型 */
     static {
@@ -35,6 +37,9 @@ public class CardBinClass {
         bindType.add("T");
         bindType.add("L");
         bindType.add("ZY");
+        contactsMap.put("01", "一级");
+        contactsMap.put("02", "二级");
+        contactsMap.put("03", "三级");
     }
 
     /**
@@ -146,5 +151,30 @@ public class CardBinClass {
             return true;
         }
         return false;
+    }
+
+    /**
+     * 
+     * 【方法名】 : (获取人脉类型). <br/>
+     * 【作者】: madman .<br/>
+     * 【时间】： 2016年11月8日 下午7:03:08 .<br/>
+     * 【参数】： .<br/>
+     * 
+     * @param contact
+     *            人脉类型
+     * @return .<br/>
+     *         <p>
+     *         修改记录.<br/>
+     *         修改人: madman 修改描述：创建新新件 .<br/>
+     *         <p/>
+     */
+    public static String getContactValue(String contact) {
+        if (EmptyChecker.isEmpty(contact)) {
+            return "未知";
+        }
+        if (contactsMap.containsKey(contact.trim())) {
+            return contactsMap.get(contact.trim());
+        }
+        return "未知";
     }
 }
