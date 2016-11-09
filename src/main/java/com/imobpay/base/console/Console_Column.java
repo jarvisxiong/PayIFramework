@@ -1533,6 +1533,8 @@ public final class Console_Column {
     public static final String  WXZF                     = "WXZF";
     /** 支付宝支付 */
     public static final String  ZFBZF                    = "ZFBZF";
+    /** 返回合作方交易装填 */
+    public static final String  TRANS_STATUS             = "STATUS";
 
     /*** 欣象扫码支付产量定义结束 ***/
 
