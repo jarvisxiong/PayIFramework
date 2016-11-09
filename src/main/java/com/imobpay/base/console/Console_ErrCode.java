@@ -121,6 +121,15 @@ public final class Console_ErrCode {
     public static final String NOTE_NOBRANCHIDCODE     = "9188";
     /**手机号已注册[TA]返回码*/
     public static final String NOTE_MOBILENOYETCODE    = "9192";
+    /**密码错，请确认账号或密码[TA]返回码*/
+    public static final String NOTE_PWDERRORCODE       = "9193";
+    /**用户受限,请联系代理商[TA]返回码*/
+    public static final String NOTE_USERLIMITATCODE    = "9194";
+    /**用户未注册[TA]返回码*/
+    public static final String NOTE_NOREGISTERCODE     = "9195";
+    /**密码错误次数超过三次[TA]返回码*/
+    public static final String NOTE_PWDERRORTHREECODE  = "9179";
+    
     /********************************************************************************************/
     
     /********************** 中文描述 ********************/
@@ -306,5 +315,13 @@ public final class Console_ErrCode {
     public static final String NOTE_NOBRANCHIDDESC       = "机构号不存在[TA]";
     /**手机号已注册[TA]返回描述*/
     public static final String NOTE_MOBILENOYETDESC      = "手机号已注册[TA]";
+    /**用户未注册[TA]返回描述*/
+    public static final String NOTE_NOREGISTERDESC       = "用户未注册[TA]";
+    /**用户受限,请联系代理商[TA]返回描述*/
+    public static final String NOTE_USERLIMITATDESC      = "用户受限,请联系代理商[TA]";
+    /**密码错误次数超过三次[TA]返回描述*/
+    public static final String NOTE_PWDERRORTHREEDESC    = "密码错误次数超过三次[TA]";
+    /**密码错，请确认账号或密码[TA]返回描述*/
+    public static final String NOTE_PWDERRORDESC         = "密码错，请确认账号或密码[TA]";
     
 }
