@@ -63,10 +63,6 @@ public final class Console_Server_Jym {
     public static final String JYM_MOBILERECHARGE                = "OFC001";
     /********************************************************************************************/
 
-    /********************************** AppServer服务 **********************************************/
-    public static final String JYM_AppMoudlesCompare             = "AppMoudlesCompare";
-    /********************************************************************************************/
-
     /********************************** 业务服务 **********************************************/
     /** 抓取用户信息 */
     public static final String JYM_SAVETAKEUSERINFO              = "SaveTakeUserInfo";
@@ -118,6 +114,12 @@ public final class Console_Server_Jym {
     public static final String JYM_SELECTFANSNOTICE              = "SelectFansNotice";
     /** 查询系统参数 */
     public static final String JYM_SELECTSYSPARAM                = "SelectSysParam";
+    /** 查询ic公钥接口 */
+    public static final String JYM_SERVICEGETPUBLICKEY           = "GetPublicKey";
+    /** 查询获取限额 */
+    public static final String JYM_SERVICESGETLIMIT              = "GetLimit";
+    /** 查询系统参数 */
+    public static final String JYM_SERVICESGETWITHDRAWALSFEE     = "GetWithdrawalsFee";
 
     /********************************************************************************************/
 
@@ -153,7 +155,7 @@ public final class Console_Server_Jym {
     /********************************** 短信服务 **********************************************/
 
     /** 实时、下推短信入口 */
-    public static final String JYM_DWSMS1001           = "DWSMS1001";
+    public static final String JYM_DWSMS1001                     = "DWSMS1001";
 
     /********************************************************************************************/
 }

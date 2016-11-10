@@ -27,6 +27,10 @@ public final class Console_ErrCode {
     /********************************** 公共类错误码 **********************************************/
     /** 交易成功 */
     public static final String SUCCESS                 = "0000";
+    /** 交易失败  由于搬迁无法处理返回码，必须使用这个而建立，平常使用8894作为返回码 ，否则客户端可能存在直接退出登录的问题。*/
+    public static final String RESULT_FAIL             = "0001";
+    /** 交易无记录 由于搬迁无法处理返回码，必须使用这个而建立，平常使用8894作为返回码  ，否则客户端可能存在直接退出登录的问题。*/
+    public static final String RESULT_NO               = "0002";
     /** 系统异常 */
     public static final String SYSERROR                = "9999";
     /** 业务参数异常 */
