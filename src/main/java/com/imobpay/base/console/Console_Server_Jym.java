@@ -43,6 +43,9 @@ public final class Console_Server_Jym {
     public static final String JYM_TAUSERREGISTER                = "TaUserRegister";
     /** 用户登录TA */
     public static final String JYM_TAUSERLOGIN                   = "TaUserLogin";
+    /** 用户信息查询TA */
+    public static final String JYM_TAQUERYUSERINFO               = "TaQueryUserInfo";
+    
     
 
     /********************************************************************************************/
