@@ -27,6 +27,10 @@ public final class Console_ErrCode {
     /********************************** 公共类错误码 **********************************************/
     /** 交易成功 */
     public static final String SUCCESS                 = "0000";
+    /** 交易失败  由于搬迁无法处理返回码，必须使用这个而建立，平常使用8894作为返回码 ，否则客户端可能存在直接退出登录的问题。*/
+    public static final String RESULT_FAIL             = "0001";
+    /** 交易无记录 由于搬迁无法处理返回码，必须使用这个而建立，平常使用8894作为返回码  ，否则客户端可能存在直接退出登录的问题。*/
+    public static final String RESULT_NO               = "0002";
     /** 系统异常 */
     public static final String SYSERROR                = "9999";
     /** 业务参数异常 */
@@ -186,7 +190,7 @@ public final class Console_ErrCode {
     /** CUSTOMERID不存在 */
     public static final String NO_CUSTOMERID           = "CUSTOMERID不存在";
     /** 当前等级无描述信息 */
-    public static final String NO_lEVELDESC            = "当前等级无描述信息";
+    public static final String NO_LEVELDESC            = "当前等级无描述信息";
     /** 应用参数为空 */
     public static final String APPUSER_EMPTYDESC       = "应用请求参数为空";
     /** 模块参数为空 */

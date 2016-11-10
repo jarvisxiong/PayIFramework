@@ -661,10 +661,7 @@ public final class Console_Column {
     public static final String  WITHDRAWALS_DESC1      = "普通提现";
     /** T+2提现 */
     public static final String  WITHDRAWALS_DESC2      = "T+2提现";
-    /** 预计 此变量无需添加 final 程序中存在重新赋值 */
-    public static String        WITHDRAWALS_DESC3      = "预计";
-    /** 到账 此变量无需添加 final 程序中存在重新赋值 */
-    public static String        WITHDRAWALS_DESC4      = "前到账";
+
     /** 到账提醒 */
     public static final String  WITHDRAWALS_DESC5      = "预计１个工作日后到账";
     /** 到账提醒 */
