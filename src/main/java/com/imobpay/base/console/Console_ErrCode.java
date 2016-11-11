@@ -310,6 +310,8 @@ public final class Console_ErrCode {
     public static final String SMS_SUCCESS_MSG           = "成功";
     /**极光推送推送配置表的数据未配置*/
     public static final String DP_NODATA_MSG             = "推送配置表的数据未配置";
+    /**未能查询到限额信息*/
+    public static final String LIMIT_ERROR_MSG             = "未能查询到限额信息";
 
     /**TA卡已失效[TA]返回描述*/
     public static final String URL_NOEXITISDESC          = "TA卡已失效[TA]";
