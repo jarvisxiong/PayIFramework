@@ -47,8 +47,8 @@ public class FreemarkerUtils {
      * @since JDK 1.6 PayIFramework 1.0 <br/>
      */
     public static void main(String[] args) throws Exception {
-        createFtl("QTS_SYS_PARAM");
-        createFtl("TB_CUST_ACTIVITY_RECORD");
+//        createFtl("QTS_SYS_PARAM");
+        createFtl("awards");
 //        createFtl("TB_ADDRESS", "TB_MOBILE_APP", "TB_MOBILE_INFO");
 
     }

@@ -103,6 +103,8 @@ public final class Console_Server_Jym {
     public static final String JYM_QUERYWINRECORD                = "QueryWinRecord";
     /** 查询瑞粉返佣发放记录 */
     public static final String JYM_SELECTSENDREBATERECORD        = "SelectSendRebateRecord";
+    /** 瑞钱宝年终活动抽奖查询 */
+    public static final String JYM_DRAWLIST                      = "DrawList";
 
     /********************************************************************************************/
 
@@ -138,7 +140,7 @@ public final class Console_Server_Jym {
     /********************************** 短信服务 **********************************************/
 
     /** 实时、下推短信入口 */
-    public static final String JYM_DWSMS1001           = "DWSMS1001";
+    public static final String JYM_DWSMS1001                     = "DWSMS1001";
 
     /********************************************************************************************/
 
