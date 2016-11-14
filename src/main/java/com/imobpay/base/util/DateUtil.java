@@ -6,6 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+import com.imobpay.base.log.LogPay;
+
 /**
  * 日期时间处理工具类 ClassName: DateUtil <br/>
  * date: 2016年6月1日 下午4:26:02 <br/>
@@ -220,5 +222,43 @@ public final class DateUtil {
 
         return time;
     }
-
+    /**
+     * 将原格式 的日期字符串，转换成新的格式
+     * 
+     * @Title: formatDateByFormat
+     * @Description: 将原格式 的日期字符串，转换成新的格式
+     * @Date May 3, 2014 21:23:41 PM
+     * @modifyDate May 3, 2014 21:23:41 PM
+     * @param date
+     *            日期对象 java.util.Date
+     * @param srcFormat
+     *            原格式 java.lang.String
+     * @param disFormat
+     *            目标格式 java.lang.String
+     * @return String 转换后的String日期
+     * 
+     *         <pre>
+     * 案例：
+     *    String result = formatDate("20150404",  "yyyyMMdd", "yyyy-MM-dd");
+     * 结果：result =  2015-04-04
+     * </pre>
+     * @since PlatForm 1.0
+     */
+    public static String formatDate(String date, String srcFormat, String disFormat) {
+        SimpleDateFormat srcSdf = null;
+        try {
+            srcSdf = new SimpleDateFormat(srcFormat);
+            // 将原日期转换成毫秒
+            long srcDateTimes = srcSdf.parse(date).getTime();
+            Date d = new Date();
+            d.setTime(srcDateTimes);
+            SimpleDateFormat sdf = new SimpleDateFormat(disFormat);
+            return sdf.format(d).toString();
+        } catch (Exception e) {
+            LogPay.error(e.getMessage(), e);
+            return null;
+        } finally {
+            srcSdf = null;
+        }
+    }
 }
