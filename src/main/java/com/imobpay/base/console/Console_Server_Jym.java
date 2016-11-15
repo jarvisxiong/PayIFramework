@@ -180,6 +180,9 @@ public final class Console_Server_Jym {
     public static final String JYM_SMZF100001                    = "SMZF100001";
     /** 微信支付请求入口 */
     public static final String JYM_SMZF100002                    = "SMZF100002";
+    /** 获取用户二维码请求入口 */
+    public static final String JYM_TAGETPAYPICURL                = "TAGetPayPicUrl";
+    
 
     /********************************************************************************************/
 }

@@ -142,6 +142,18 @@ public final class Console_ErrCode {
     
     /********************************************************************************************/
     
+    
+    /**********************************  OuterServer错误返回码 **************************************/
+
+    /**参数未配置[TA]返回码*/
+    public static final String NOTE_NOPARAMCONFIGCODE   = "9182";
+    /**生成二维码失败[TA]返回码*/
+    public static final String NOTE_CREATETWOCODE       = "9176";
+
+  
+    
+    /********************************************************************************************/
+    
     /********************** 中文描述 ********************/
 
     /** 交易码为空 */
@@ -390,4 +402,8 @@ public final class Console_ErrCode {
     public static final String NOTE_CHECKPASTDUEDESC     = "验证码已过期,请重新申请[TA]";
     /**原密码错误，请重新输入[TA]返回描述*/
     public static final String NOTE_PWDFORMERERRDESC     = "原密码错误，请重新输入[TA]";
+    /**参数未配置[TA]返回描述*/
+    public static final String NOTE_NOPARAMCONFIGDESC    = "参数未配置[TA]";
+    /**生成二维码失败[TA]返回描述*/
+    public static final String NOTE_CREATETWODESC        = "获取二维码繁忙[TA]";
 }
