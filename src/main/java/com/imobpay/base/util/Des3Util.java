@@ -4,10 +4,12 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.security.Key;
 import java.security.MessageDigest;
+
 import javax.crypto.Cipher;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESedeKeySpec;
 import javax.crypto.spec.IvParameterSpec;
+
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 
@@ -32,7 +34,7 @@ public class Des3Util {
      * 创建日期：2015年12月29日.<br/>
      * 创建时间：下午2:58:57.<br/>
      * 参数者异常：@param b 传入数据 参数者异常：@throws Exception 系统异常 .<br/>
-     * 返回值： @return 返回结果：byte[].<br/>
+     * 返回值： @return 返回结果：byte[] b.<br/>
      * 其它内容： JDK 1.6 qtservices 1.0.<br/>
      */
     public static byte[] Base64Encode(byte[] b) throws Exception {
@@ -323,6 +325,33 @@ public class Des3Util {
      */
     public static void setcodingType(String codingType) {
         Des3Util.codingType = codingType;
+    }
+    
+    /**
+     * 
+     * 方法名： Encrypt.<br/>
+     * 3DES加密 创建者：Lance.Wu.<br/>
+     * 创建日期：2016年1月15日.<br/>
+     * 创建时间：下午3:31:06.<br/>
+     * 参数者异常：@param strTobeEnCrypted 参数者异常： .<br/>
+     * 
+     * @param strKey
+     *            参数者异常： .<br/>
+     * @param byteIV
+     *            参数者异常： .<br/>
+     * @return 参数者异常： .<br/>
+     * @throws Exception .<br/>
+     *         其它内容： JDK 1.6 QtServerAPI 1.0.<br/>
+     */
+    public static String Encrypt2(String strTobeEnCrypted, String strKey, byte[] byteIV) throws Exception {
+        byte[] input = strTobeEnCrypted.getBytes(codingType);
+        Key k = KeyGenerator(strKey);
+        IvParameterSpec iVSpec = byteIV.length != 0 ? IvGenerator(byteIV) : IvGenerator(defaultIV);
+        Cipher c = Cipher.getInstance(cryptAlgorithm);
+        c.init(1, k, iVSpec);
+        byte[] output = c.doFinal(input);
+
+        return com.imobpay.base.util.Hex.toString(output);
     }
 
 }

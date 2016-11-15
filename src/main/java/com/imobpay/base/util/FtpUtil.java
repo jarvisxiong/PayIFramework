@@ -34,6 +34,82 @@ public class FtpUtil {
 
     /**
      * 
+     * @param server
+     *            服务器地址
+     * @param port
+     *            服务器断开
+     * @param user
+     *            用户名
+     * @param password
+     *            密码
+     * @param targetPath
+     *            目标地址
+     * @param sourcePath
+     *            源路径
+     * @param fileName
+     *            文件名
+     * @return boolean 返回结果
+     */
+    public static boolean FtpPic(String server, int port, String user, String password, String targetPath, String sourcePath, String fileName) {
+        long l = System.currentTimeMillis();
+        // 是否开启FTP上传功能
+        boolean bool = true;
+        FtpClient ftpClient = new FtpClient();
+        TelnetOutputStream os = null;
+        try {
+            log.info("FTP连接时间:" + Integer.parseInt("50000") + ",ftp读取时间:" + Integer.parseInt("50000"));
+            ftpClient.setConnectTimeout(Integer.parseInt("50000"));
+            ftpClient.setReadTimeout(Integer.parseInt("50000"));
+            ftpClient.openServer(server, port);
+            ftpClient.login(user, password);
+            createDir(ftpClient, targetPath);
+            ftpClient.cd("/");
+            if (targetPath.length() != 0) {
+                ftpClient.cd(targetPath);
+            }
+            ftpClient.binary();
+            os = ftpClient.put(fileName);
+            byte[] b = Format.decryptBASE64(sourcePath);
+            os.write(b);
+            os.flush();
+        } catch (IOException e) {
+            log.info(e.getMessage(), e);
+            log.error(e.getMessage(), e);
+            log.debug("上传失败数据,目录地址:" + targetPath + ",文件名:" + fileName + ",文件数据:" + sourcePath);
+            bool = false;
+            return bool;
+        } finally {
+            try {
+                if (os != null) {
+                    os.close();
+                    log.info("os已关闭");
+                }
+            } catch (IOException e) {
+                log.info(e.getMessage(), e);
+                log.error(e.getMessage(), e);
+                log.debug("上传失败数据,目录地址:" + targetPath + ",文件名:" + fileName + ",文件数据:" + sourcePath);
+                bool = false;
+                return bool;
+            }
+            try {
+                if (ftpClient != null) {
+                    ftpClient.closeServer();
+                    log.info("ftpClient已关闭");
+                }
+            } catch (IOException e) {
+                log.info(e.getMessage(), e);
+                log.error(e.getMessage(), e);
+                log.debug("上传失败数据,目录地址:" + targetPath + ",文件名:" + fileName + ",文件数据:" + sourcePath);
+                bool = false;
+                return bool;
+            }
+            log.info("FTP上传耗时:" + (System.currentTimeMillis() - l) + "FTP上传结果:" + bool);
+        }
+        return true;
+
+    }
+    /**
+     * 
      * 方法名： ftpPic.<br/>
      * 方法作用:上传图片.<br/>
      *
@@ -53,11 +129,11 @@ public class FtpUtil {
      * 返回值： @return 返回结果：boolean.<br/>
      * 其它内容： JDK 1.6 PayIFramework 1.0.<br/>
      */
-    public static boolean ftpPic(String server, int port, String user, String password, String targetPath, String sourcePath, String fileName, String isFlag, String ftpConnTimes,String ftpReadTimes) {
+    public static boolean ftpPic(String server, int port, String user, String password, String targetPath, String sourcePath, String fileName, String isFlag, String ftpConnTimes, String ftpReadTimes) {
         long l = System.currentTimeMillis();
         // 是否开启FTP上传功能
         boolean bool = true;
-        if (isFlag.equals("Y")) {
+        if ("Y".equals(isFlag)) {
             FtpClient ftpClient = new FtpClient();
             TelnetOutputStream os = null;
             try {
@@ -170,11 +246,11 @@ public class FtpUtil {
      * 返回值： @return 返回结果：boolean.<br/>
      * 其它内容： JDK 1.6 PayIFramework 1.0.<br/>
      */
-    public static boolean ftpFile(String server, int port, String user, String password, String targetPath, String sourcePath, String fileName, String isFlag, String ftpConnTimes,String ftpReadTimes) {
+    public static boolean ftpFile(String server, int port, String user, String password, String targetPath, String sourcePath, String fileName, String isFlag, String ftpConnTimes, String ftpReadTimes) {
         long l = System.currentTimeMillis();
         // 是否开启FTP上传功能
         boolean bool = true;
-        if (isFlag.equals("Y")) {
+        if ("Y".equals(isFlag)) {
             FtpClient ftpClient = new FtpClient();
             TelnetOutputStream os = null;
             try {
@@ -333,11 +409,15 @@ public class FtpUtil {
      *            文件名
      * @param port
      *            端口号
+     * @param ftpConnTimes           
+     *            ftp连接时间
+     * @param ftpReadTimes
+     *            ftp读取时间    
      * @return String
      * @throws IOException
      * 
      */
-    public static String ftpGetPic(String server, int port, String user, String password, String path, String filename, String ftpConnTimes,String ftpReadTimes) {
+    public static String ftpGetPic(String server, int port, String user, String password, String path, String filename, String ftpConnTimes, String ftpReadTimes) {
         long l = System.currentTimeMillis();
         FtpClient ftpClient = new FtpClient();
         TelnetInputStream is = null;
