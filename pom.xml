@@ -141,6 +141,13 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
+		<!--二维码工具包 -->
+		<dependency>
+			<groupId>Qrcode</groupId>
+			<artifactId>Qrcode</artifactId>
+			<version>Qrcode</version>
+		</dependency>
 	</dependencies>
 
 	<!-- <distributionManagement> -->
