@@ -57,7 +57,8 @@ public final class Console_Server_Jym {
     /** 单条短信发送 */
     public static final String JYM_SIMPLESMS                     = "SimpleSms";
     /********************************************************************************************/
-
+    /********************************** AppServer服务 **********************************************/
+    public static final String JYM_AppMoudlesCompare             = "AppMoudlesCompare";
     /********************************** 查询服务 **********************************************/
     /** 查询banner图接口 */
     public static final String JYM_SELECTPUBLICPIC               = "SelectPublicPic";
