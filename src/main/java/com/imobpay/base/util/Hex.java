@@ -44,6 +44,53 @@ public final class Hex {
         }
         return new String(buf);
     }
+    /**
+     * 
+     * 【方法名】    :  <br/> 
+     * 【注意】: <br/> 
+     * 【作者】: 黄强 .<br/>
+     * 【时间】： 2016年11月2日 上午11:57:42 .<br/>
+     * 【参数】： .<br/>
+     * @param in 需要转换的字节数组
+     * @param split 字节间的间隔符
+     * @return .<br/>
+     * <p>
+     * 修改记录.<br/>
+     * 修改人: 黄强 修改描述：创建新新件 .<br/>
+     * <p/>
+     */
+    public static String byte2hex(byte in[], String split) {
+        if (split == null)
+            split = "";
+        StringBuffer s = new StringBuffer();
+        int i = 0;
+        while (i < in.length)
+            s.append(byte2hex(in[i++])).append(split);
+        return s.toString();
+    }
+
+    /**
+     * 
+     * 【方法名】    :  <br/> 
+     * 【注意】: <br/> 
+     * 【作者】: 黄强 .<br/>
+     * 【时间】： 2016年11月2日 上午11:58:41 .<br/>
+     * 【参数】： .<br/>
+     * @param in 需要转换的字节
+     * @return .<br/>
+     * <p>
+     * 修改记录.<br/>
+     * 修改人: 黄强 修改描述：创建新新件 .<br/>
+     * <p/>
+     */
+    public static String byte2hex(byte in) {
+        String s = Integer.toHexString(in < 0 ? 256 + in : in);
+        if (s.length() < 2)
+            s = "0" + s;
+        else
+            s = s.substring(s.length() - 2, s.length());
+        return s;
+    }
 
     /**
      * toString(将byte[]的转换为相应的十六进制String表示) <br/>

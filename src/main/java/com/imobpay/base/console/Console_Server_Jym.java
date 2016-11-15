@@ -39,6 +39,15 @@ public final class Console_Server_Jym {
     public static final String JYM_USERLOGIN                     = "UserLogin";
     /** 用户注册 */
     public static final String JYM_USERREGISTER                  = "userRegister";
+    /** 用户注册TA */
+    public static final String JYM_TAUSERREGISTER                = "TaUserRegister";
+    /** 用户登录TA */
+    public static final String JYM_TAUSERLOGIN                   = "TaUserLogin";
+    /** 用户信息查询TA */
+    public static final String JYM_TAQUERYUSERINFO               = "TaQueryUserInfo";
+    /** 更新用户信息TA */
+    public static final String JYM_TAUPDATEUSERINFO              = "TaUpdateUserInfo";
+    
 
     /********************************************************************************************/
 
@@ -58,10 +67,6 @@ public final class Console_Server_Jym {
     public static final String JYM_MOBILERECHARGE                = "OFC001";
     /********************************************************************************************/
 
-    /********************************** AppServer服务 **********************************************/
-    public static final String JYM_AppMoudlesCompare             = "AppMoudlesCompare";
-    /********************************************************************************************/
-
     /********************************** 业务服务 **********************************************/
     /** 抓取用户信息 */
     public static final String JYM_SAVETAKEUSERINFO              = "SaveTakeUserInfo";
@@ -79,6 +84,8 @@ public final class Console_Server_Jym {
     public static final String JYM_SERVICESGETREPORTBACKINFO     = "GetReportBackInfo";
     /** 客户端首页查询 */
     public static final String JYM_SERVICESGETHOMEDATA           = "GetHomeData";
+    /** 客户端首页查询 */
+    public static final String JYM_SERVICESUPDATEPSAMID          = "UpdatePsamid";
     /********************************************************************************************/
 
     /********************************** 查询服务 **********************************************/
@@ -119,6 +126,12 @@ public final class Console_Server_Jym {
     public static final String JYM_CLICKDRAW                     = "ClickDraw";
     /** 瑞钱宝年终我的战绩查询 */
     public static final String JYM_MYWARSCORES                   = "MyWarScores";
+    /** 查询ic公钥接口 */
+    public static final String JYM_SERVICEGETPUBLICKEY           = "GetPublicKey";
+    /** 查询获取限额 */
+    public static final String JYM_SERVICESGETLIMIT              = "GetLimit";
+    /** 查询系统参数 */
+    public static final String JYM_SERVICESGETWITHDRAWALSFEE     = "GetWithdrawalsFee";
 
     /********************************************************************************************/
 
