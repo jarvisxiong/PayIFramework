@@ -40,11 +40,8 @@ public class DBHelper {
     /** 参数 */
     private static final String CLSDRIVER = "oracle.jdbc.OracleDriver";
     /** 参数 */
-    private static final String USERNME   = "qtfans";
-    /** 参数 */
     private static final String PWD       = "aaa111";
-
-    /** 参数 */
+    private static final String USERNME   = "qtpay";
 
     /**
      * getConnection:(获取数据库连接). <br/>
