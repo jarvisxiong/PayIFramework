@@ -178,6 +178,8 @@ public final class DateUtil {
      * addDate:(计算时间格式). <br/>
      * 
      * @author Lance.Wu <br/>
+     * 修改者: Jason.H
+     * 修改时间 : 2016年11月15日11:12:12
      * @param date
      *            时间 <br/>
      * @param num
@@ -194,7 +196,7 @@ public final class DateUtil {
         sc.setTime(date);
         sc.add(calendarType, num);
         SimpleDateFormat sd = new SimpleDateFormat(formart);
-        return sd.format(sd);
+        return sd.format(sc.getTime());
     }
 
     /**

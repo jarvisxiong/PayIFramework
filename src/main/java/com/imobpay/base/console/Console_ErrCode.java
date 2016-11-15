@@ -251,7 +251,7 @@ public final class Console_ErrCode {
     /** 获取的参数异常 */
     public static final String PARAM_ERROR               = "获取的参数异常";
 
-    /** 获取的参数异常 */
+    /** 抽奖可用次数为0 */
     public static final String COUNT_ERROR               = "抽奖可用次数为0";
     /** 手机号不合法 */
     public static final String ERROR_MOBILENO            = "手机号不合法";

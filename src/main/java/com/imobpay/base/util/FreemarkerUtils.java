@@ -48,7 +48,7 @@ public class FreemarkerUtils {
      */
     public static void main(String[] args) throws Exception {
 //        createFtl("QTS_SYS_PARAM");
-        createFtl("awards");
+        createFtl("TB_CUST_ACTIVITY_JNLS");
 //        createFtl("TB_ADDRESS", "TB_MOBILE_APP", "TB_MOBILE_INFO");
 
     }

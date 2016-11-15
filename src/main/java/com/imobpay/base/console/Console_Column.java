@@ -1177,11 +1177,11 @@ public final class Console_Column {
     public static final String  HD_MOBILENO             = "mobileNo";
     /**** 2016年10月26日11:42:41 由madman添加 *********/
     /** 本地日期 */
-    public static final String  LOCALDATE_S               = "localDate";
+    public static final String  LOCALDATE_S             = "localDate";
     /** 本地时间 */
-    public static final String  LOCALTIME_S              = "localTime";
+    public static final String  LOCALTIME_S             = "localTime";
     /** 状态 */
-    public static final String  AWARDSTATUS              = "awardStatus";
+    public static final String  AWARDSTATUS             = "awardStatus";
     /** 瑞钱包活动返回字段:奖品等级 */
     public static final String  AWARDNO                 = "awardNo";
     /** 瑞钱包活动返回字段:奖品等级 */
@@ -1200,6 +1200,27 @@ public final class Console_Column {
     public static final String  START                   = "start";
     /** 瑞钱包活动返回字段:中奖区间-结束 */
     public static final String  END                     = "end";
+
+    /** 瑞钱包活动返回字段:总金额 */
+    public static final String  SUMMONEY                = "sumMoney";
+
+    /** 瑞钱包活动返回字段:总抽奖次数 */
+    public static final String  CLICKCOUNT              = "clickCount";
+
+    /** 瑞钱包活动返回字段:交易月份 */
+    public static final String  MONTH_S                 = "month";
+    /** 瑞钱包活动返回字段:达标日期 */
+    public static final String  ACCORDDAY               = "accordDay";
+    /** 瑞钱包活动返回字段:达标次数 */
+    public static final String  ACCORDCOUNT             = "accordCount";
+    /** 瑞钱包活动返回字段:返手续费 */
+    public static final String  BACKMONEY               = "backMoney";
+    /** 瑞钱包活动返回字段:统计月份 */
+    public static final String  TRADEMONTH              = "tradeMonth";
+    /** 瑞钱包活动返回字段:满立送活动 */
+    public static final String  MLSACTIVELIST           = "mlsActiveList";
+    /** 瑞钱包活动返回字段:大放价活动 */
+    public static final String  DFJACTIVELIST           = "dfjActiveList";
 
     /***************************************** Search服务常量字段结束 **********************/
 
