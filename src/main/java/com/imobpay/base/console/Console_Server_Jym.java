@@ -126,6 +126,12 @@ public final class Console_Server_Jym {
     public static final String JYM_SERVICESGETLIMIT              = "GetLimit";
     /** 查询系统参数 */
     public static final String JYM_SERVICESGETWITHDRAWALSFEE     = "GetWithdrawalsFee";
+    /** 瑞钱宝年终活动抽奖查询 */
+    public static final String JYM_DRAWLIST                      = "DrawList";
+    /** 瑞钱宝年终活动点击抽奖 */
+    public static final String JYM_CLICKDRAW                     = "ClickDraw";
+    /** 瑞钱宝年终我的战绩查询 */
+    public static final String JYM_MYWARSCORES                   = "MyWarScores";
 
     /********************************************************************************************/
 
