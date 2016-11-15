@@ -87,7 +87,8 @@ public final class Console_Server_Jym {
     /** 客户端首页查询 */
     public static final String JYM_SERVICESUPDATEPSAMID          = "UpdatePsamid";
     /********************************************************************************************/
-
+    /********************************** AppServer服务 **********************************************/
+    public static final String JYM_AppMoudlesCompare             = "AppMoudlesCompare";
     /********************************** 查询服务 **********************************************/
     /** 客户端更新接口 */
     public static final String JYM_CLIENTUPDATE                  = "ClientUpdate";
