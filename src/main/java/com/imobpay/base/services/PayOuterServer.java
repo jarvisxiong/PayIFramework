@@ -20,5 +20,5 @@ package com.imobpay.base.services;
  * 【作者】：madman <br/> 
  * </pre>
  */
-public interface WeiXinServer extends ParentServer {
+public interface PayOuterServer extends ParentServer {
 }

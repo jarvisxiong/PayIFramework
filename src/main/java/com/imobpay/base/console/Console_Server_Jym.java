@@ -170,4 +170,16 @@ public final class Console_Server_Jym {
     public static final String JYM_DWSMS1001                     = "DWSMS1001";
 
     /********************************************************************************************/
+    /********************************** 微信服务 **********************************************/
+
+    /** 合作方查询订单入口 */
+    public static final String JYM_SEARCHORDERID                 = "SearchOrderID";
+    /** 合作方请求订单入口 */
+    public static final String JYM_SENDORDERID                   = "SendOrderID";
+    /** 微信支付请求入口 */
+    public static final String JYM_SMZF100001                    = "SMZF100001";
+    /** 微信支付请求入口 */
+    public static final String JYM_SMZF100002                    = "SMZF100002";
+
+    /********************************************************************************************/
 }
