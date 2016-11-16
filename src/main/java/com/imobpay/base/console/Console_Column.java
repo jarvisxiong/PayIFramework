@@ -1220,6 +1220,8 @@ public final class Console_Column {
     public static final String  AWARDLEVEL              = "awardLevel";
     /** 瑞钱包活动返回字段:奖品名称 */
     public static final String  AWARDNAME               = "awardName";
+    /** 瑞钱包活动返回字段:奖品金额 */
+    public static final String  AWARDMONEY               = "awardMoney";
     /** 瑞钱包活动返回字段:奖品ID */
     public static final String  AWARDSID                = "awardSid";
     /** 瑞钱包活动返回字段:APP标志 */
