@@ -138,7 +138,12 @@ public final class Console_Server_Jym {
     public static final String JYM_CLICKDRAW                     = "ClickDraw";
     /** 瑞钱宝年终我的战绩查询 */
     public static final String JYM_MYWARSCORES                   = "MyWarScores";
-
+    /** 获取银行信息 */
+    public static final String JYM_TAGETBANKINFO                 = "TaGetBankInfo";
+    /** 获取微信用户信息 */
+    public static final String JYM_TAGETUSERWXINFO               = "TAGetUserWxInfo";
+    /** 获取TA交易记录 */
+    public static final String JYM_TATRANSRECORDS                = "TaTransRecords";
     /********************************************************************************************/
 
     /********************************** 业务服务 **********************************************/

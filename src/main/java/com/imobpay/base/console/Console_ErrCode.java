@@ -139,6 +139,11 @@ public final class Console_ErrCode {
     public static final String NOTE_CHECKPASTDUECODE   = "9186";
     /**原密码错误，请重新输入[TA]返回码*/
     public static final String NOTE_PWDFORMERERRCODE   = "9178";
+    /**暂不支持该银行卡，请换卡[TA]返回码*/
+    public static final String NOTE_NOBACKBANKCODE     = "9181";
+    /**非法请求参数 [TA]返回码*/
+    public static final String NOTE_LAWLESSPARAMCODE   = "9177";
+    
     
     /********************************************************************************************/
     
@@ -406,4 +411,9 @@ public final class Console_ErrCode {
     public static final String NOTE_NOPARAMCONFIGDESC    = "参数未配置[TA]";
     /**生成二维码失败[TA]返回描述*/
     public static final String NOTE_CREATETWODESC        = "获取二维码繁忙[TA]";
+    /**暂不支持该银行卡，请换卡[TA]返回描述*/
+    public static final String NOTE_NOBACKBANKDESC       = "暂不支持该银行卡，请换卡[TA]";
+    /**非法请求参数 [TA]返回描述*/
+    public static final String NOTE_LAWLESSPARAMDESC     = "非法请求参数 [TA]";
+
 }
