@@ -48,12 +48,12 @@ public class FreemarkerUtils {
      */
     public static void main(String[] args) throws Exception {
 //        createFtl("QTS_SYS_PARAM");
-        createFtl("TB_CUST_ACTIVITY_JNLS");
+        createFtl("TB_CUST_ACTIVITY_JNLS_SUM");
 //        createFtl("TB_ADDRESS", "TB_MOBILE_APP", "TB_MOBILE_INFO");
 
         // createFtl("tb_cust_mobile_nets");
         // createFtl("cs_cardbin");
-        createFtl("tb_fans_sys_notice");
+//        createFtl("tb_fans_sys_notice");
     }
 
     /**
