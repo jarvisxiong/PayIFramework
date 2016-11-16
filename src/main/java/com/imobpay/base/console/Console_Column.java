@@ -1220,6 +1220,8 @@ public final class Console_Column {
     public static final String  AWARDLEVEL              = "awardLevel";
     /** 瑞钱包活动返回字段:奖品名称 */
     public static final String  AWARDNAME               = "awardName";
+    /** 瑞钱包活动返回字段:奖品金额 */
+    public static final String  AWARDMONEY               = "awardMoney";
     /** 瑞钱包活动返回字段:奖品ID */
     public static final String  AWARDSID                = "awardSid";
     /** 瑞钱包活动返回字段:APP标志 */
@@ -1228,6 +1230,8 @@ public final class Console_Column {
     public static final String  AVAILCOUNT              = "availCount";
     /** 瑞钱包活动返回字段:抽奖记录 */
     public static final String  AWARDLIST               = "awardList";
+    /** 瑞钱包活动返回字段:当月中奖金额 */
+    public static final String  AWARDAMOUNT               = "awardAmount";
     /** 瑞钱包活动返回字段:中奖区间-开始 */
     public static final String  START                   = "start";
     /** 瑞钱包活动返回字段:中奖区间-结束 */

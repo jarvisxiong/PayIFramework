@@ -47,7 +47,6 @@ public final class Console_Server_Jym {
     public static final String JYM_TAQUERYUSERINFO               = "TaQueryUserInfo";
     /** 更新用户信息TA */
     public static final String JYM_TAUPDATEUSERINFO              = "TaUpdateUserInfo";
-    
 
     /********************************************************************************************/
 
@@ -121,11 +120,11 @@ public final class Console_Server_Jym {
     /** 查询系统参数 */
     public static final String JYM_SELECTSYSPARAM                = "SelectSysParam";
     /** 瑞钱宝年终活动抽奖查询 */
-    public static final String JYM_SERVICESDRAWLIST                      = "DrawList";
+    public static final String JYM_SERVICESDRAWLIST              = "DrawList";
     /** 瑞钱宝年终活动点击抽奖 */
-    public static final String JYM_SERVICESCLICKDRAW                     = "ClickDraw";
+    public static final String JYM_SERVICESCLICKDRAW             = "ClickDraw";
     /** 瑞钱宝年终我的战绩查询 */
-    public static final String JYM_SERVICESMYWARSCORES                   = "MyWarScores";
+    public static final String JYM_SERVICESMYWARSCORES           = "MyWarScores";
     /** 查询ic公钥接口 */
     public static final String JYM_SERVICEGETPUBLICKEY           = "GetPublicKey";
     /** 查询获取限额 */
@@ -144,6 +143,7 @@ public final class Console_Server_Jym {
     public static final String JYM_TAGETUSERWXINFO               = "TAGetUserWxInfo";
     /** 获取TA交易记录 */
     public static final String JYM_TATRANSRECORDS                = "TaTransRecords";
+
     /********************************************************************************************/
 
     /********************************** 业务服务 **********************************************/
@@ -193,7 +193,6 @@ public final class Console_Server_Jym {
     public static final String JYM_SMZF100002                    = "SMZF100002";
     /** 获取用户二维码请求入口 */
     public static final String JYM_TAGETPAYPICURL                = "TAGetPayPicUrl";
-    
 
     /********************************************************************************************/
 }
