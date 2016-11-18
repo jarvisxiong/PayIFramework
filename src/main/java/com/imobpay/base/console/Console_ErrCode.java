@@ -143,7 +143,10 @@ public final class Console_ErrCode {
     public static final String NOTE_NOBACKBANKCODE     = "9181";
     /**非法请求参数 [TA]返回码*/
     public static final String NOTE_LAWLESSPARAMCODE   = "9177";
-    
+    /**实名信息有误,请确认重新输入[TA]返回码*/
+    public static final String NOTE_REALNAMEERRCODE    = "9184";
+    /**用户未获取验证码[TA]返回码*/
+    public static final String NOTE_NOTGETCHECKCODE    = "9183";
     
     /********************************************************************************************/
     
@@ -415,5 +418,10 @@ public final class Console_ErrCode {
     public static final String NOTE_NOBACKBANKDESC       = "暂不支持该银行卡，请换卡[TA]";
     /**非法请求参数 [TA]返回描述*/
     public static final String NOTE_LAWLESSPARAMDESC     = "非法请求参数 [TA]";
-
+    /**此公众号无记录[TA]返回描述*/
+    public static final String NOTE_NORESULTPUBACTDESC   = "此公众号无记录[TA]";
+    /**实名信息有误,请确认重新输入[TA]返回描述*/
+    public static final String NOTE_REALNAMEERRDESC      = "实名信息有误,请确认重新输入[TA]";
+    /**用户未获取验证码[TA]返回描述*/
+    public static final String NOTE_NOTGETCHECKDESC      = "用户未获取验证码[TA]";
 }

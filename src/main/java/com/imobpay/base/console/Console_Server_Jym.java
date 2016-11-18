@@ -47,6 +47,8 @@ public final class Console_Server_Jym {
     public static final String JYM_TAQUERYUSERINFO               = "TaQueryUserInfo";
     /** 更新用户信息TA */
     public static final String JYM_TAUPDATEUSERINFO              = "TaUpdateUserInfo";
+    /** 找回用户密码TA */
+    public static final String JYM_TAFINDUSERPASS                = "TaFindUserPass";
     
 
     /********************************************************************************************/
@@ -144,6 +146,8 @@ public final class Console_Server_Jym {
     public static final String JYM_TAGETUSERWXINFO               = "TAGetUserWxInfo";
     /** 获取TA交易记录 */
     public static final String JYM_TATRANSRECORDS                = "TaTransRecords";
+    /** 获取微信token号 */
+    public static final String JYM_TAGETWXTOKEN                  = "TaGetWxToken";
     /********************************************************************************************/
 
     /********************************** 业务服务 **********************************************/
