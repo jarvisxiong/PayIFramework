@@ -1424,4 +1424,132 @@ public final class Console_Column {
 
     /***************************************** 卡服务服务常量字段结束 **********************/
 
+
+    /***************************************** 微信服务常量字段开始 **********************/
+    public static final String  SCENE                    = "SCENE";
+    /** 订单金额 */
+    public static final String  TOTALAMOUNT              = "TOTALAMOUNT";
+    /** 订单流水号 */
+    public static final String  REQMSGID                 = "REQMSGID";
+    /** 订单流水号 */
+    public static final String  ORI_REQMSGID             = "ORIREQMSGID";
+    /** 商户编号 */
+    public static final String  MERCHANTCODE             = "MERCHANTCODE";
+    /** 代发银行卡号 */
+    public static final String  RECVACCNO                = "RECVACCNO";
+    /** 订单标题 */
+    public static final String  SUBJECT                  = "SUBJECT";
+    /** 来源系统 */
+    public static final String  FROMSYS                  = "FROMSYS";
+    /** 01：合作方相关报文 02：扫码支付平台相关报文 */
+    public static final String  MSGTYPE                  = "MSGTYPE";
+    /** 请求日期yyyyMMddHHmmss */
+    public static final String  REQDATE                  = "REQDATE";
+    /** PAYTYPE */
+    public static final String  PAYWAY                   = "PAYWAY";
+    /** SHOPNAME */
+    public static final String  SHOPNAME                 = "SHOPNAME";
+    /** 手续费 */
+    public static final String  TOTALFEE                 = "TOTALFEE";
+    /** 对账日期 */
+    public static final String  SETTLEDATE               = "SETTLEDATE";
+    /** 对账文件返回类型 */
+    public static final String  FILETYPE                 = "FILETYPE";
+    /** biaoti */
+    public static final String  SUBJECTTITLE             = "SUBJECTTITLE";
+
+    /** 接收数据 */
+    public static final String  RECEIVEDATA              = "data";
+    /** 接收签名失败 */
+    public static final String  RECEIVESIGN              = "sign";
+    /** 接收机构号 */
+    public static final String  RECEIVEBRD               = "brid";
+    /** 机构号 */
+    public static final String  P_BRDID                  = "P_BRDID";
+
+    /*** 欣象扫码支付产量定义开始 ***/
+    public static final String  PAY_SCENE                = "scene";
+    /** 订单金额 */
+    public static final String  PAY_TOTALAMOUNT          = "totalAmount";
+    /** 订单流水号 */
+    public static final String  PAY_REQMSGID             = "orderId";
+    /** 订单流水号 */
+    public static final String  PAY_ORI_REQMSGID         = "ORIREQMSGID";
+    /** 商户编号 */
+    public static final String  PAY_MERCHANTCODE         = "merchantCode";
+    /** 代发银行卡号 */
+    public static final String  PAY_RECVACCNO            = "RECVACCNO";
+    /** 订单标题 */
+    public static final String  PAY_SUBJECT              = "subjectTitle";
+    /** 订单描述 */
+    public static final String  PAY_SUBJECT_DESC         = "subjectDesc";
+    /** 来源系统 */
+    public static final String  PAY_FROMSYS              = "FROMSYS";
+    /** 01：合作方相关报文 02：扫码支付平台相关报文 */
+    public static final String  PAY_MSGTYPE              = "msgType";
+    /** 请求日期yyyyMMddHHmmss */
+    public static final String  PAY_REQDATE              = "REQDATE";
+    /** PAYTYPE */
+    public static final String  PAY_PAYWAY               = "payWay";
+    /** SHOPNAME */
+    public static final String  PAY_SHOPNAME             = "shopName";
+    /** 手续费 */
+    public static final String  PAY_TOTALFEE             = "totalFee";
+    /** 对账日期 */
+    public static final String  PAY_SETTLEDATE           = "SETTLEDATE";
+    /** 对账文件返回类型 */
+    public static final String  PAY_FILETYPE             = "FILETYPE";
+    /** 商户操作员编号 */
+    public static final String  PAY_OPERID               = "operID";
+    /** 商户门店编号 */
+    public static final String  PAY_STOREID              = "storeID";
+    /** 商户机具终端编号 */
+    public static final String  PAY_TEMINALID            = "teminalId";
+    /** 回调地址 */
+    public static final String  PAY_CALLBACKURL          = "CALLBACKURL";
+    /** 合作机构生成订流水号 */
+    public static final String  O_SERIALID               = "O_SERIALID";
+    /** 交易请求日期 */
+    public static final String  O_REQ_TRANDATE           = "O_REQ_TRANDATE";
+    /** 交易请求时间 */
+    public static final String  O_REQ_TRANTIME           = "O_REQ_TRANTIME";
+    /** 接口版本（默认为：1.0.0） */
+    public static final String  O_VERSION                = "O_VERSION";
+    /** 返回二维码字段 **/
+    public static final String  QRCODE                   = "QRCODE";
+    /** payproduct **/
+    public static final String  PAY_WEIXIN_MERCHANTID    = "PAY_WEIXIN_MERCHANTID";
+    /** payproduct **/
+    public static final String  PAY_WEIXIN_PRODUCTID     = "PAY_WEIXIN_PRODUCTID";
+    /** 商户编号 **/
+    public static final String  HOST_MERCHANT_ID         = "HOST_MERCHANT_ID";
+    /** 支付方式 **/
+    public static final String  TX_PAY_TYPE              = "TX_PAY_TYPE";
+    /** 机构编号 **/
+    public static final String  TX_BRANCH_ID             = "TX_BRANCH_ID";
+    /** TX_MERCHANT_ID **/
+    public static final String  TX_MERCHANT_ID           = "TX_MERCHANT_ID";
+    /** TX_PRODUCT_ID **/
+    public static final String  TX_PRODUCT_ID            = "TX_PRODUCT_ID";
+    /** 订单金额 **/
+    public static final String  TX_ORDER_AMOUNT          = "TX_ORDER_AMOUNT";
+    /** 传给核心的外部订单号 **/
+    public static final String  OUTSIDE_ORDER            = "OUTSIDE_ORDER";
+    /** 微信消息模板内容个数 */
+    public static final String  WX_MSG_TEM_CONTENT_COUNT = "WX_MSG_TEM_CONTENT_COUNT";
+    /** 微信消息模板内容个数 */
+    public static final String  WX_MSG_TRADE_TYPE        = "WX_MSG_TRADE_TYPE";
+    /** 合作方回到地址 */
+    public static final String  WX_COOPER_URL            = "URL";
+    /** 微信支付 */
+    public static final String  WXZF                     = "WXZF";
+    /** 支付宝支付 */
+    public static final String  ZFBZF                    = "ZFBZF";
+    /** 返回合作方交易装填 */
+    public static final String  TRANS_STATUS             = "STATUS";
+
+    /*** 欣象扫码支付产量定义结束 ***/
+
+    /***************************************** 微信服务常量字段结束 **********************/
+
 }
