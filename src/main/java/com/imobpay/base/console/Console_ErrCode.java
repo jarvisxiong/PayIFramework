@@ -380,8 +380,6 @@ public final class Console_ErrCode {
     public static final String RESP_CODE_99_ERR_UNKNOW            = "0099";                                               // 未知系统异常
     /** 交易异常 */
     public static final String TRANS_ERROR                        = "交易异常";
-
-
     /**TA卡已失效[TA]返回描述*/
     public static final String URL_NOEXITISDESC          = "TA卡已失效[TA]";
     /**TA卡已绑定[TA]返回描述*/
