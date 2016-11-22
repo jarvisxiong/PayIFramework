@@ -148,7 +148,9 @@ public final class Console_Server_Jym {
     public static final String JYM_TATRANSRECORDS                = "TaTransRecords";
     /** 获取微信token号 */
     public static final String JYM_TAGETWXTOKEN                  = "TaGetWxToken";
-
+    /** 查询交易记录 */
+    public static final String JYM_GETTRADERECORD                = "GetTradeRecord";
+    
     /********************************************************************************************/
 
     /********************************** 业务服务 **********************************************/
