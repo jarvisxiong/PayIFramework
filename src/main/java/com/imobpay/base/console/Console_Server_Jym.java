@@ -200,6 +200,8 @@ public final class Console_Server_Jym {
     public static final String JYM_TAGETPAYPICURL                = "TAGetPayPicUrl";
     /** 微信下推 */
     public static final String JYM_WXDOWNPUSH                    = "WxMsgSend";
+    /** 微信消息推送 */
+    public static final String JYM_TAWEIXINMSGPUSH               = "TAWeiXinMsgPush";
 
 
     /********************************************************************************************/

@@ -157,6 +157,8 @@ public final class Console_ErrCode {
     public static final String NOTE_NOPARAMCONFIGCODE   = "9182";
     /**生成二维码失败[TA]返回码*/
     public static final String NOTE_CREATETWOCODE       = "9176";
+    /**消息推送模板不存在[TA]返回码*/
+    public static final String NOTE_NOTEMPLATECODE      = "9173";
 
   
     
@@ -422,4 +424,6 @@ public final class Console_ErrCode {
     public static final String NOTE_REALNAMEERRDESC      = "实名信息有误,请确认重新输入[TA]";
     /**用户未获取验证码[TA]返回描述*/
     public static final String NOTE_NOTGETCHECKDESC      = "用户未获取验证码[TA]";
+    /**消息推送模板不存在[TA]返回描述*/
+    public static final String NOTE_NOTEMPLATEDESC      = "消息推送模板不存在[TA]";
 }
