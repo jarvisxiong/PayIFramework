@@ -49,7 +49,6 @@ public final class Console_Server_Jym {
     public static final String JYM_TAUPDATEUSERINFO              = "TaUpdateUserInfo";
     /** 找回用户密码TA */
     public static final String JYM_TAFINDUSERPASS                = "TaFindUserPass";
-    
 
     /********************************************************************************************/
 
@@ -88,6 +87,8 @@ public final class Console_Server_Jym {
     public static final String JYM_SERVICESGETHOMEDATA           = "GetHomeData";
     /** 客户端首页查询 */
     public static final String JYM_SERVICESUPDATEPSAMID          = "UpdatePsamid";
+    /** 上传用户的埋点信息接口 */
+    public static final String JYM_GETBURYINGPOINT               = "GetBuryingPoint";
     /********************************************************************************************/
 
     /********************************** 查询服务 **********************************************/

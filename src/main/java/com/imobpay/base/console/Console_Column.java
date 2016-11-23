@@ -559,6 +559,22 @@ public final class Console_Column {
     public static final String  REALDAYS                 = "realDays";
     /** 无忧还 贷款比率 */
     public static final String  RATE                     = "rate";
+    /** 无忧还 埋点内容 */
+    public static final String  BURYINGCONTENT           = "BURYINGCONTENT";
+    /** 无忧还 埋点内容 */
+    public static final String  BURYINGCONTENT_KEY       = "buryingContentxinxiang2016";
+    /** 无忧还 热点编号 */
+    public static final String  HOTNUMBER                = "hotNumber";
+    /** 无忧还 所属页面 */
+    public static final String  BELONGPAGE               = "belongPage";
+    /** 无忧还 热区类型 I001 输入 */
+    public static final String  HOTTYPE                  = "hotType";
+    /** 无忧还 起点内容 */
+    public static final String  STARTTIME                = "startTime";
+    /** 无忧还 埋点内容 */
+    public static final String  ENDTIME                  = "endTime";
+    /** 无忧还 埋点内容 */
+    public static final String  CONTENT_DESC             = "content";
 
     /***************************************** 业务中心搬迁返回字段结束 **********************/
 

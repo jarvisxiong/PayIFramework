@@ -27,7 +27,7 @@ import sun.misc.BASE64Encoder;
  * 
  * @author Lance.Wu . <br/> 
  * @version   . <br/> 
- * @since JDK 1.6 ServerFramework 1.0 . <br/> 
+ * @since JDK 1.6 ServerFramework 1.0 . <br/>
  * </pre>
  */
 @SuppressWarnings("all")
@@ -40,8 +40,7 @@ public class Format {
     /**
      * 
      * 方法名： getLocalTrmSeqNum.<br/>
-     * 获取六位自动增长码
-     * 创建者：madman.<br/>
+     * 获取六位自动增长码 创建者：madman.<br/>
      * 创建日期：2016年3月15日.<br/>
      * 创建时间：上午11:11:08.<br/>
      * 参数者异常：@return .<br/>
@@ -56,9 +55,7 @@ public class Format {
     /**
      * 
      * 方法名： time.<br/>
-     * 方法作用:
-     * 获取系统当前时间
-     * 创建者：madman.<br/>
+     * 方法作用: 获取系统当前时间 创建者：madman.<br/>
      * 创建日期：2016年3月15日.<br/>
      * 创建时间：下午1:10:52.<br/>
      * 参数者异常：@return .<br/>
@@ -82,7 +79,8 @@ public class Format {
     }
 
     /**
-     * String缂侀悗鐤亹閹惧啿闁哄啫鐖煎Λ?濞达綇鎷�     * 
+     * String缂侀悗鐤亹閹惧啿闁哄啫鐖煎Λ?濞达綇鎷� *
+     * 
      * @return String
      */
     public static String formatTime() {
@@ -92,13 +90,14 @@ public class Format {
 
     /**
      * 
-      *@方法名称:getBeforeMin
-      *@方法作用：取当前时间的前多少分钟
-      *@方法条件：
-      *@方法流程：
-      *@作者:madman
-      *@param i 参数
-      *@return 返回结果
+     * @方法名称:getBeforeMin
+     * @方法作用：取当前时间的前多少分钟
+     * @方法条件：
+     * @方法流程：
+     * @作者:madman
+     * @param i
+     *            参数
+     * @return 返回结果
      */
     public static String getBeforeMin(int i) {
         Date date = new Date();
@@ -113,9 +112,10 @@ public class Format {
 
     /**
      * 
-     * @author madman  浣滆�
-     * @param number 鍙傛暟
-     * @return  缁撴灉
+     * @author madman 浣滆�
+     * @param number
+     *            鍙傛暟
+     * @return 缁撴灉
      * @since JDK 1.6 JDK鐗堟湰
      */
     public static boolean luhnTest(String number) {
@@ -182,12 +182,12 @@ public class Format {
 
     /**
      * 
-      *@方法名称:getTrmSeqNum
-      *@方法作用：
-      *@方法条件：
-      *@方法流程：
-      *@作者:madman
-      *@return 返回结果
+     * @方法名称:getTrmSeqNum
+     * @方法作用：
+     * @方法条件：
+     * @方法流程：
+     * @作者:madman
+     * @return 返回结果
      */
     public static synchronized String getTrmSeqNum() {
         sequence = sequence >= 999999 ? 1 : sequence + 1;
@@ -197,14 +197,16 @@ public class Format {
 
     /**
      * 
-      *@方法名称:addLeftZero
-      *@方法作用：
-      *@方法条件：
-      *@方法流程：
-      *@作者:madman
-      *@param s 参数
-      *@param length 长度
-      *@return 结果
+     * @方法名称:addLeftZero
+     * @方法作用：
+     * @方法条件：
+     * @方法流程：
+     * @作者:madman
+     * @param s
+     *            参数
+     * @param length
+     *            长度
+     * @return 结果
      */
     public static String addLeftZero(String s, int length) {
         // StringBuilder sb=new StringBuilder();
@@ -248,7 +250,9 @@ public class Format {
     }
 
     /**
-     * 閺夌偞妲掕缂傚啯閿�闁绘瑯鍏涚粭鍌炲礂閹峰苯鐏�闁奸缚绮鹃崵婊勫?绁╂慨妯奸崵婊兠归敓浠嬫嚐闁秵纰傞柛鏍ㄧ墪婢с倖绗熼敓浠嬪船閸欐闁哄洦褰冮崺鍡欑矉閿熺晫鎷担鍛婅含闁告碍绋掗敓浠嬫煂閿熶粙寮伴妸锔斤級闁烩晠鏅茬欢?濞寸姴锕ら¨宥夊矗閸垺绁茬紒鍌︽嫹濞戞搫鎷烽崵骞冮崣澶婄亞 缂備礁鐗忛—褎鎷呴崗鍛溄闁奸鑳堕悡?缂佹鍨奸惃銉╁础閸愩劌瀣�柟褰冮弸?16閺夆晜绋戦崺妤呭极閹峰本绁☉鎾虫惈閻⊙囨嚍閸屾稒娈剁紓渚婃嫹
+     * 閺夌偞妲掕缂傚啯閿�闁绘瑯鍏涚粭鍌炲礂閹峰苯鐏�闁奸缚绮鹃崵婊勫?绁╂慨妯奸崵婊兠归敓浠嬫嚐闁秵纰傞柛鏍ㄧ墪婢с倖绗熼敓浠嬪船閸欐
+     * 闁哄洦褰冮崺鍡欑矉閿熺晫鎷担鍛婅含闁告碍绋掗敓浠嬫煂閿熶粙寮伴妸锔斤級闁烩晠鏅茬欢?濞寸姴锕ら¨宥夊矗閸垺绁茬紒鍌︽嫹濞戞搫鎷烽崵骞冮崣澶婄亞
+     * 缂備礁鐗忛—褎鎷呴崗鍛溄闁奸鑳堕悡?缂佹鍨奸惃銉╁础閸愩劌瀣�柟褰冮弸?16閺夆晜绋戦崺妤呭极閹峰本绁☉鎾虫惈閻⊙囨嚍閸屾稒娈剁紓渚婃嫹
      * 
      * @param hexString
      *            16閺夆晜绋戦崺妤呭极閿�
@@ -359,7 +363,7 @@ public class Format {
     /**
      * 闁告帒妫滃ù鍡涘箲椤ゅ秷绀嬮柛蹇ユ嫹
      * 
-     * @param fen 
+     * @param fen
      *            閻庢稒椤戜焦绋夐敓?
      * @return String
      */
@@ -417,8 +421,7 @@ public class Format {
      * BASE64閻熸瑱绲介惁鎲塺l
      * 
      * @param b
-     *            閻庢稒椤戜焦绋夐幓鎺旀闁告牭鎷�     * @throws Exception
-     *             濠㈠爢鍐＝閻㈡嫹
+     *            閻庢稒椤戜焦绋夐幓鎺旀闁告牭鎷� * @throws Exception 濠㈠爢鍐＝閻㈡嫹
      */
     public static void writePic(byte[] b) throws Exception {
         File f = new File("/home/weblogic/outs.jpg");
@@ -429,10 +432,13 @@ public class Format {
         fos.close();
     }
 
-    /** 
+    /**
      * pc-qt 閻庢稒椤戜焦绋夐煫鐟濋悺鎺戝暱娑斿繒鎮伴敓?
-     * @param str 闂傚浄鎷烽—鍛村即鐎涙ɑ鐓�柣銊ュ閻⊙呯箔閿旇儻
-     * @param strLength 闁哄牞鎷烽幃妤呮閿熺晫婀撮柣銊ュ閻⊙呯箔閿旇儻闁汇劌瀚伴弳杈ㄦ償閿�
+     * 
+     * @param str
+     *            闂傚浄鎷烽—鍛村即鐎涙ɑ鐓�柣銊ュ閻⊙呯箔閿旇儻
+     * @param strLength
+     *            闁哄牞鎷烽幃妤呮閿熺晫婀撮柣銊ュ閻⊙呯箔閿旇儻闁汇劌瀚伴弳杈ㄦ償閿�
      * @return
      * 
      * @return String
@@ -455,12 +461,12 @@ public class Format {
 
     /**
      * 
-      *@方法名称:getRandom
-      *@方法作用：
-      *@方法条件：
-      *@方法流程：
-      *@作者:madman
-      *@return 返回随机数
+     * @方法名称:getRandom
+     * @方法作用：
+     * @方法条件：
+     * @方法流程：
+     * @作者:madman
+     * @return 返回随机数
      */
     public static String getRandom() {
         Random random = new Random();
@@ -474,6 +480,7 @@ public class Format {
 
     /**
      * 生成两位随机数
+     * 
      * @return String
      */
     public static String getTwoRand() {
@@ -487,17 +494,19 @@ public class Format {
 
     /**
      * 
-     * 【方法名】    : 判断当前字符串是否为数字. <br/> 
-     * 【注意】: (这里描述这个方法的注意事项 – 可选).<br/> 
+     * 【方法名】 : 判断当前字符串是否为数字. <br/>
+     * 【注意】: (这里描述这个方法的注意事项 – 可选).<br/>
      * 【作者】: 张朝辉 .<br/>
      * 【时间】： 2016年10月18日 下午4:18:47 .<br/>
      * 【参数】： .<br/>
-     * @param str 返回数字字符串
+     * 
+     * @param str
+     *            返回数字字符串
      * @return .<br/>
-     * <p>
-     * 修改记录.<br/>
-     * 修改人: 张朝辉 修改描述：创建新新件 .<br/>
-     * <p/>
+     *         <p>
+     *         修改记录.<br/>
+     *         修改人: 张朝辉 修改描述：创建新新件 .<br/>
+     *         <p/>
      */
     public static boolean isNumeric(String str) {
         Pattern pattern = Pattern.compile("[0-9]*");
@@ -510,20 +519,22 @@ public class Format {
 
     /**
      * 
-     * 【方法名】    : getloantime. <br/> 
-     * 【注意】: (这里描述这个方法的注意事项 – 可选).<br/> 
+     * 【方法名】 : getloantime. <br/>
+     * 【注意】: (这里描述这个方法的注意事项 – 可选).<br/>
      * 【作者】: 张朝辉 .<br/>
      * 【时间】： 2016年10月18日 下午4:18:47 .<br/>
      * 【参数】： .<br/>
-     * @param date 日期字符串
+     * 
+     * @param date
+     *            日期字符串
      * @return .<br/>
-     * <p>
-     * 修改记录.<br/>
-     * 修改人: 张朝辉 修改描述：创建新新件 .<br/>
-     * <p/>
-     * @throws Exception 
+     *         <p>
+     *         修改记录.<br/>
+     *         修改人: 张朝辉 修改描述：创建新新件 .<br/>
+     *         <p/>
+     * @throws Exception 异常
      */
-    public static boolean getloantime(String date) throws Exception  {
+    public static boolean getloantime(String date) throws Exception {
         boolean flag = false;
         Date date1 = null;
         Date date2 = null;
@@ -531,37 +542,57 @@ public class Format {
         date1 = sf.parse(date);
         date2 = sf.parse(formatDate());
         long l = (date1.getTime() - date2.getTime()) / (1000 * 60 * 60 * 24);
-        LogPay.info("据需还款日："+l);
-        if (l>=0&&l < 4) {
+        LogPay.info("据需还款日：" + l);
+        if (l >= 0 && l < 4) {
             flag = true;
         }
         return flag;
 
     }
+
     /**
      * 
-     * @param args 传入参数
-     * @throws Exception 
+     * 【方法名】 : (传入字符串返回经过处理的字符串). <br/>
+     * 【注意】: (这里描述这个方法的注意事项 – 可选).<br/>
+     * 【作者】: 张朝辉 .<br/>
+     * 【时间】： 2016年11月21日 下午4:00:12 .<br/>
+     * 【参数】： .<br/>
+     * 
+     * @param reqString
+     *            传入字符串
+     * @return .<br/>
+     *         <p>
+     *         修改记录.<br/>
+     *         修改人: 张朝辉 修改描述：创建新新件 .<br/>
+     *         <p/>
+     */
+    public static String getStrings(String reqString) {
+        if (EmptyChecker.isEmpty(reqString)) {
+            reqString = "";
+        }
+
+        return reqString;
+
+    }
+
+    /**
+     * 
+     * @param args
+     *            传入参数
+     * @throws Exception 异常
      * @throws ParseException
      */
-    public static void main(String[] args) throws Exception{
-/*        String dateStr = "20161025";
-        boolean flag = false;
-        Date date = null;
-        Date nowDate = new Date();
-        SimpleDateFormat sf = new SimpleDateFormat("yyyyMMdd");
-        try {
-            date = sf.parse(dateStr);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        long l = (date.getTime() - nowDate.getTime()) / (1000 * 60 * 60 * 24);
-        if (l < 4) {
-            System.out.println(l);
-        }
-        System.out.println(20161023 - 20161020);
-        System.out.println("没有到临近账单日");*/
-        
+    public static void main(String[] args) throws Exception {
+        /*
+         * String dateStr = "20161025"; boolean flag = false; Date date = null;
+         * Date nowDate = new Date(); SimpleDateFormat sf = new
+         * SimpleDateFormat("yyyyMMdd"); try { date = sf.parse(dateStr); } catch
+         * (ParseException e) { e.printStackTrace(); } long l = (date.getTime()
+         * - nowDate.getTime()) / (1000 * 60 * 60 * 24); if (l < 4) {
+         * System.out.println(l); } System.out.println(20161023 - 20161020);
+         * System.out.println("没有到临近账单日");
+         */
+
         System.out.println(getloantime("20161028"));
     }
 }
