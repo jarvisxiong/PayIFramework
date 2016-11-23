@@ -149,7 +149,9 @@ public final class Console_Server_Jym {
     public static final String JYM_TATRANSRECORDS                = "TaTransRecords";
     /** 获取微信token号 */
     public static final String JYM_TAGETWXTOKEN                  = "TaGetWxToken";
-
+    /** 查询交易记录 */
+    public static final String JYM_GETTRADERECORD                = "GetTradeRecord";
+    
     /********************************************************************************************/
 
     /********************************** 业务服务 **********************************************/
@@ -199,6 +201,12 @@ public final class Console_Server_Jym {
     public static final String JYM_SMZF100002                    = "SMZF100002";
     /** 获取用户二维码请求入口 */
     public static final String JYM_TAGETPAYPICURL                = "TAGetPayPicUrl";
+    /** 微信下推 */
+    public static final String JYM_WXDOWNPUSH                    = "WxMsgSend";
+    /** 微信消息推送 */
+    public static final String JYM_TAWEIXINMSGPUSH               = "TAWeiXinMsgPush";
+    /** 用户抽奖 */
+    public static final String JYM_TAGETWINPICURL                = "TAGetWinPicUrl";
 
     /********************************************************************************************/
 }

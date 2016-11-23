@@ -157,6 +157,10 @@ public final class Console_ErrCode {
     public static final String NOTE_NOPARAMCONFIGCODE   = "9182";
     /**生成二维码失败[TA]返回码*/
     public static final String NOTE_CREATETWOCODE       = "9176";
+    /**消息推送模板不存在[TA]返回码*/
+    public static final String NOTE_NOTEMPLATECODE      = "9173";
+    /**本轮已结束,感谢参与[TA]返回码*/
+    public static final String NOTE_THISENDCODE         = "9160";
 
   
     
@@ -380,8 +384,6 @@ public final class Console_ErrCode {
     public static final String RESP_CODE_99_ERR_UNKNOW            = "0099";                                               // 未知系统异常
     /** 交易异常 */
     public static final String TRANS_ERROR                        = "交易异常";
-
-
     /**TA卡已失效[TA]返回描述*/
     public static final String URL_NOEXITISDESC          = "TA卡已失效[TA]";
     /**TA卡已绑定[TA]返回描述*/
@@ -424,4 +426,8 @@ public final class Console_ErrCode {
     public static final String NOTE_REALNAMEERRDESC      = "实名信息有误,请确认重新输入[TA]";
     /**用户未获取验证码[TA]返回描述*/
     public static final String NOTE_NOTGETCHECKDESC      = "用户未获取验证码[TA]";
+    /**消息推送模板不存在[TA]返回描述*/
+    public static final String NOTE_NOTEMPLATEDESC       = "消息推送模板不存在[TA]";
+    /**本轮已结束,感谢参与[TA]返回码*/
+    public static final String NOTE_THISENDDESC          = "本轮已结束,感谢参与[TA]";
 }
