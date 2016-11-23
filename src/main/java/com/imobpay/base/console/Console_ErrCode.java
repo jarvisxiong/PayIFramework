@@ -159,6 +159,8 @@ public final class Console_ErrCode {
     public static final String NOTE_CREATETWOCODE       = "9176";
     /**消息推送模板不存在[TA]返回码*/
     public static final String NOTE_NOTEMPLATECODE      = "9173";
+    /**本轮已结束,感谢参与[TA]返回码*/
+    public static final String NOTE_THISENDCODE         = "9160";
 
   
     
@@ -425,5 +427,7 @@ public final class Console_ErrCode {
     /**用户未获取验证码[TA]返回描述*/
     public static final String NOTE_NOTGETCHECKDESC      = "用户未获取验证码[TA]";
     /**消息推送模板不存在[TA]返回描述*/
-    public static final String NOTE_NOTEMPLATEDESC      = "消息推送模板不存在[TA]";
+    public static final String NOTE_NOTEMPLATEDESC       = "消息推送模板不存在[TA]";
+    /**本轮已结束,感谢参与[TA]返回码*/
+    public static final String NOTE_THISENDDESC          = "本轮已结束,感谢参与[TA]";
 }
