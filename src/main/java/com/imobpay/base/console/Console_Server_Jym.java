@@ -204,7 +204,8 @@ public final class Console_Server_Jym {
     public static final String JYM_WXDOWNPUSH                    = "WxMsgSend";
     /** 微信消息推送 */
     public static final String JYM_TAWEIXINMSGPUSH               = "TAWeiXinMsgPush";
-
+    /** 用户抽奖 */
+    public static final String JYM_TAGETWINPICURL                = "TAGetWinPicUrl";
 
     /********************************************************************************************/
 }
