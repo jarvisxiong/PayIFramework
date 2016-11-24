@@ -85,10 +85,15 @@ public final class Console_Server_Jym {
     public static final String JYM_SERVICESGETREPORTBACKINFO     = "GetReportBackInfo";
     /** 客户端首页查询 */
     public static final String JYM_SERVICESGETHOMEDATA           = "GetHomeData";
-    /** 客户端首页查询 */
+    /** 更新psamid状态 */
     public static final String JYM_SERVICESUPDATEPSAMID          = "UpdatePsamid";
+
     /** 上传用户的埋点信息接口 */
     public static final String JYM_GETBURYINGPOINT               = "GetBuryingPoint";
+
+    /** 抽奖接口 */
+    public static final String JYM_SERVICESLUCKYDRAW             = "LuckyDraw";
+
     /********************************************************************************************/
 
     /********************************** 查询服务 **********************************************/
