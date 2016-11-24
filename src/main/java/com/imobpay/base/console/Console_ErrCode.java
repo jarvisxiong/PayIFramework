@@ -161,8 +161,12 @@ public final class Console_ErrCode {
     public static final String NOTE_NOTEMPLATECODE      = "9173";
     /**本轮已结束,感谢参与[TA]返回码*/
     public static final String NOTE_THISENDCODE         = "9160";
-
-  
+    /**系统繁忙,请稍后重试[TA]返回码*/
+    public static final String NOTE_SYSISBUSYCODE       = "9199";
+    /**TA卡号错误[TA]返回码*/
+    public static final String NOTE_TACARDERRCODE       = "9197";
+    /**用户未实名认证[TA]返回码*/
+    public static final String USERNOREALNAMECODE       = "9174";
     
     /********************************************************************************************/
     
@@ -430,4 +434,12 @@ public final class Console_ErrCode {
     public static final String NOTE_NOTEMPLATEDESC       = "消息推送模板不存在[TA]";
     /**本轮已结束,感谢参与[TA]返回码*/
     public static final String NOTE_THISENDDESC          = "本轮已结束,感谢参与[TA]";
+    /**系统繁忙,请稍后重试[TA]返回描述*/
+    public static final String NOTE_SYSISBUSYDESC        = "系统繁忙,请稍后重试[TA]";
+    /**TA卡号错误[TA]返回描述*/
+    public static final String NOTE_TACARDERRDESC        = "TA卡号错误[TA]";
+    /**用户未实名认证[TA]返回描述*/
+    public static final String USERNOREALNAMEDESC        = "用户未实名认证[TA]";
+
+    
 }
